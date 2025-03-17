@@ -1,0 +1,106 @@
+# configFile=/data/data/com.termux/files/home/StatisticalServer/StatisticalServerJulia/config.txt
+
+# interface_Function=http_Server
+# # interface_Function=http_Client
+# webPath=/data/data/com.termux/files/home/StatisticalServer/html/
+# host=::0
+# # host=::1
+# port=10001
+# key=username:password
+# number_Worker_threads=1
+# isConcurrencyHierarchy=Tasks
+# is_monitor=false
+# time_sleep=0.02
+# monitor_dir=/data/data/com.termux/files/home/StatisticalServer/Intermediary/
+# monitor_file=/data/data/com.termux/files/home/StatisticalServer/Intermediary/intermediary_write_C.txt
+# output_dir=/data/data/com.termux/files/home/StatisticalServer/Intermediary/
+# output_file=/data/data/com.termux/files/home/StatisticalServer/Intermediary/intermediary_write_Julia.txt
+# temp_cache_IO_data_dir=/data/data/com.termux/files/home/StatisticalServer/temp/
+# URL=http://username:password@127.0.0.1:8081/index.html?a=1&b=2&c=3#a1
+# # URL=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# # proxy=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# requestPath=/
+# requestMethod=POST
+# # requestMethod=GET
+# Referrer=http://username:password@127.0.0.1:8081/index?a=1&b=2&c=3#a1
+# # Referrer=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# Authorization=username:password
+# # Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# Cookie=session_id=request_Key->username:password
+# # Cookie=session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# requestFrom=user@email.com
+# readtimeout=0
+# connecttimeout=0
+# postData={"Client_say":"Julia-1.9.3 HTTP.request()."}
+
+
+# configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt
+
+interface_Function=http_Server
+# interface_Function=http_Client
+webPath=/home/StatisticalServer/html/
+host=::0
+# host=::1
+port=10001
+key=username:password
+number_Worker_threads=1
+isConcurrencyHierarchy=Tasks
+is_monitor=false
+time_sleep=0.02
+monitor_dir=/home/StatisticalServer/Intermediary/
+monitor_file=/home/StatisticalServer/Intermediary/intermediary_write_C.txt
+output_dir=/home/StatisticalServer/Intermediary/
+output_file=/home/StatisticalServer/Intermediary/intermediary_write_Julia.txt
+temp_cache_IO_data_dir=/home/StatisticalServer/temp/
+URL=http://username:password@127.0.0.1:8081/index.html?a=1&b=2&c=3#a1
+# URL=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# proxy=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+requestPath=/
+requestMethod=POST
+# requestMethod=GET
+Referrer=http://username:password@127.0.0.1:8081/index?a=1&b=2&c=3#a1
+# Referrer=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+Authorization=username:password
+# Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+Cookie=session_id=request_Key->username:password
+# Cookie=session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+requestFrom=user@email.com
+readtimeout=0
+connecttimeout=0
+postData={"Client_say":"Julia-1.9.3 HTTP.request()."}
+
+
+# configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt
+
+# interface_Function=http_Server
+# # interface_Function=http_Client
+# webPath=C:/StatisticalServer/html/
+# host=::0
+# # host=::1
+# port=10001
+# key=username:password
+# number_Worker_threads=1
+# isConcurrencyHierarchy=Tasks
+# is_monitor=false
+# time_sleep=0.02
+# monitor_dir=C:/StatisticalServer/Intermediary/
+# monitor_file=C:/StatisticalServer/Intermediary/intermediary_write_C.txt
+# output_dir=C:/StatisticalServer/Intermediary/
+# output_file=C:/StatisticalServer/Intermediary/intermediary_write_Julia.txt
+# temp_cache_IO_data_dir=C:/StatisticalServer/temp/
+# URL=http://username:password@127.0.0.1:8081/index.html?a=1&b=2&c=3#a1
+# # URL=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# # proxy=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# requestPath=/
+# requestMethod=POST
+# # requestMethod=GET
+# Referrer=http://username:password@127.0.0.1:8081/index?a=1&b=2&c=3#a1
+# # Referrer=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# Authorization=username:password
+# # Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# Cookie=session_id=request_Key->username:password
+# # Cookie=session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# requestFrom=user@email.com
+# readtimeout=0
+# connecttimeout=0
+# postData={"Client_say":"Julia-1.9.3 HTTP.request()."}
