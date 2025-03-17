@@ -1,0 +1,1 @@
+{"Server_say":"這裏是處理後傳出的數據字符串 this is export string data"}
