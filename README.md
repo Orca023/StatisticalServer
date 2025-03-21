@@ -380,110 +380,6 @@ C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 
 
 26. (選), (鍵 Cookie 固定, 其中 Cookie 名稱 Session_ID 可以設計爲固定, Cookie 值 request_Key->username:password 可以設計爲自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的 Cookies 值字符串, 預設值爲 :  Cookie=Session_ID=request_Key->username:password
 
-![]()
-
-Interpreter :
-
-julia - 1.10.4
-
-julia - 1.10.4 - packages :
-
-&nbsp;&nbsp;&nbsp;&nbsp;Artifacts
-
-&nbsp;&nbsp;&nbsp;&nbsp;Base64
-
-&nbsp;&nbsp;&nbsp;&nbsp;BitFlags - 0.1.8
-
-&nbsp;&nbsp;&nbsp;&nbsp;CodecZlib - 0.7.4
-
-&nbsp;&nbsp;&nbsp;&nbsp;ConcurrentUtilities - 2.4.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;Dates
-
-&nbsp;&nbsp;&nbsp;&nbsp;ExceptionUnwrapping - 0.1.10
-
-&nbsp;&nbsp;&nbsp;&nbsp;HTTP - 1.10.8
-
-&nbsp;&nbsp;&nbsp;&nbsp;InteractiveUtils
-
-&nbsp;&nbsp;&nbsp;&nbsp;JLLWrappers - 1.5.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;JSON - 0.21.4
-
-&nbsp;&nbsp;&nbsp;&nbsp;Libdl
-
-&nbsp;&nbsp;&nbsp;&nbsp;Logging
-
-&nbsp;&nbsp;&nbsp;&nbsp;LoggingExtras - 1.0.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;Markdown
-
-&nbsp;&nbsp;&nbsp;&nbsp;MbedTLS - 1.1.9
-
-&nbsp;&nbsp;&nbsp;&nbsp;MbedTLS_jll - 2.28.2+0
-
-&nbsp;&nbsp;&nbsp;&nbsp;Mmap
-
-&nbsp;&nbsp;&nbsp;&nbsp;MozillaCACerts_jll - 2022.10.11
-
-&nbsp;&nbsp;&nbsp;&nbsp;NetworkOptions - 1.2.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;OpenSSL - 1.4.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;OpenSSL_jll - 3.0.13+1
-
-&nbsp;&nbsp;&nbsp;&nbsp;Parsers - 2.8.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;PrecompileTools - 1.2.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;Preferences - 1.4.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;Printf
-
-&nbsp;&nbsp;&nbsp;&nbsp;Random
-
-&nbsp;&nbsp;&nbsp;&nbsp;SHA - 0.7.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;Serialization
-
-&nbsp;&nbsp;&nbsp;&nbsp;SimpleBufferStream - 1.1.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;Sockets
-
-&nbsp;&nbsp;&nbsp;&nbsp;TOML - 1.0.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;Test
-
-&nbsp;&nbsp;&nbsp;&nbsp;TranscodingStreams - 0.10.9
-
-&nbsp;&nbsp;&nbsp;&nbsp;TranscodingStreams.extensions
-
-&nbsp;&nbsp;&nbsp;&nbsp;URIs - 1.5.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;UUIDs
-
-&nbsp;&nbsp;&nbsp;&nbsp;Unicode
-
-&nbsp;&nbsp;&nbsp;&nbsp;Zlib_jll - 1.2.13+0
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
-https://julialang.org/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方下載頁](https://julialang.org/downloads/): 
-https://julialang.org/downloads/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/JuliaLang): 
-https://github.com/JuliaLang
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/JuliaLang/julia): 
-https://github.com/JuliaLang/julia.git
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
-https://julialang.org/packages/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫](https://github.com/JuliaRegistries/General): 
-https://github.com/JuliaRegistries/General.git
-
 ---
 
 Window-cmd : startServer.bat
@@ -494,15 +390,15 @@ Window-cmd : startServer.bat
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\Criss> C:/Windows/System32/cmd.exe C:/Criss/startServer.bat C:/Criss/config.txt
+C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServer.bat C:/StatisticalServer/config.txt
 
 控制臺啓動傳參釋意 :
 
 1. (必), (固定), 微軟視窗作業系統 ( Window10 x86_64 ) 控制臺命令列窗口的二進制可執行檔 ( cmd.exe ) 啓動存儲路徑全名, 作業系統 ( Window10 x86_64 ) 固定存儲在路徑爲 :  C:/Windows/System32/cmd.exe
 
-2. (必), (自定義), 微軟視窗系統 ( Windows10 x86_64 ) 批處理程式代碼脚本 ( .bat ) 檔 ( startServer.bat ) 的存儲路徑全名, 預設值爲 :  C:/Criss/startServer.bat
+2. (必), (自定義), 微軟視窗系統 ( Windows10 x86_64 ) 批處理程式代碼脚本 ( .bat ) 檔 ( startServer.bat ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/startServer.bat
 
-3. (選) (值 C:/Criss/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/Criss/config.txt
+3. (選) (值 C:/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/StatisticalServer/config.txt
 
 ---
 
@@ -514,29 +410,29 @@ Android-Termux-Ubuntu-bash : startServer.sh
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /bin/bash /home/Criss/startServer.sh configFile=/home/Criss/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/Criss/jl/ scriptFile=/home/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 
 控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( , ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
 1. (必), (固定), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列窗口的二進制可執行檔 ( bash ) 啓動存儲路徑全名, 作業系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 固定存儲在路徑爲 :  /bin/bash
 
-2. (必), (自定義), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 批處理程式代碼脚本 ( .sh ) 檔 ( startServer.sh ) 的存儲路徑全名, 預設值爲 :  C:/Criss/startServer.sh
+2. (必), (自定義), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 批處理程式代碼脚本 ( .sh ) 檔 ( startServer.sh ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/startServer.sh
 
-3. (選), (鍵 configFile 固定, 值 /home/Criss/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  configFile=/home/Criss/config.txt
+3. (選), (鍵 configFile 固定, 值 /home/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  configFile=/home/StatisticalServer/config.txt
 
-4. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3, /bin/node ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Node.js 語言, 預設值爲 :  executableFile=/bin/julia
+4. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3 ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Node.js 語言, 預設值爲 :  executableFile=/bin/julia
 
-5. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/Criss/jl/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 Node.js ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 Node.js ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/Criss/jl/
+5. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/
 
-6. (選), (鍵 scriptFile 固定, 值 /home/Criss/jl/application.jl 自定義, 例如 [ /home/Criss/jl/application.jl, /home/Criss/py/application.py, /home/Criss/js/application.js ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 Node.js ) 代碼脚本 ( Script ) 檔 ( application.jl, application.py, application.js ) 的存儲路徑全名, 預設值爲 :  scriptFile=/home/Criss/jl/application.jl
+6. (選), (鍵 scriptFile 固定, 值 /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl 自定義, 例如 [ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl, /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的存儲路徑全名, 預設值爲 :  scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
 
-7. (選), (鍵 configInstructions 固定, 取值自定義, 且可爲空, 即取 configInstructions= 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 Node.js ) 代碼脚本 ( Script ) 檔 ( application.jl, application.py, application.js ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入代碼脚本 ( Script ) 檔 ( application.jl, application.py, application.js ) 的運行環境, 預設值爲 :  configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+7. (選), (鍵 configInstructions 固定, 取值自定義, 且可爲空, 即取 configInstructions= 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行環境, 預設值爲 :  configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 
 ---
 
 c2exe.c
 
-程式設計 C 語言, 使用 FILE *fstream = popen("shell Code Script", "r") 函數, 創建子進程 ( Sub Process ), 並在子進程 ( Sub Process ) 運行外部二進制可執行檔 ( julia.exe, python.exe, node.exe ), 功能與批處理檔 startServer.sh 類似.
+程式設計 C 語言, 使用 FILE *fstream = popen("shell Code Script", "r") 函數, 創建子進程 ( Sub Process ), 並在子進程 ( Sub Process ) 運行外部二進制可執行檔 ( julia.exe, python.exe, ), 功能與批處理檔 startServer.sh 類似.
 
 使用説明:
 
@@ -548,15 +444,15 @@ Minimalist GNU on Windows ( MinGW-w64 ) mingw64-8.1.0-release-posix-seh-rt_v6-re
 
 控制臺命令列 ( cmd ) 運行編譯指令 :
 
-C:\Criss> C:\MinGW64\bin\gcc.exe C:/Criss/c/c2exe.c -o C:/Criss/c2exe.exe
+C:\StatisticalServer> C:\MinGW64\bin\gcc.exe C:/StatisticalServer/c/c2exe.c -o C:/StatisticalServer/c2exe.exe
 
 控制臺命令列 ( cmd ) 運行顯示中文字符指令 :
 
-C:\Criss> chcp 65001
+C:\StatisticalServer> chcp 65001
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\Criss> C:/Criss/c2exe.exe configFile=C:/Criss/config.txt executableFile=C:/Criss/Julia/Julia-1.10.4/julia.exe interpreterFile=-p,4,--project=C:/Criss/jl/ scriptFile=C:/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=C:/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=C:/Criss/Intermediary/,monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt,output_dir=C:/Criss/Intermediary/,output_file=C:/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=C:/Criss/temp/
+C:\StatisticalServer> C:/StatisticalServer/c2exe.exe configFile=C:/Criss/config.txt executableFile=C:/Criss/Julia/Julia-1.10.4/julia.exe interpreterFile=-p,4,--project=C:/Criss/jl/ scriptFile=C:/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=C:/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=C:/Criss/Intermediary/,monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt,output_dir=C:/Criss/Intermediary/,output_file=C:/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=C:/Criss/temp/
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
@@ -566,11 +462,11 @@ gcc v9.3.0, g++ v9.3.0
 
 控制臺命令列 ( bash ) 運行編譯指令 :
 
-root@localhost:~# /bin/gcc /home/Criss/c/c2exe.c -o /home/Criss/c2exe.exe
+root@localhost:~# /bin/gcc /home/StatisticalServer/c/c2exe.c -o /home/StatisticalServer/c2exe.exe
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /home/Criss/c2exe.exe configFile=/home/Criss/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/Criss/jl/ scriptFile=/home/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+root@localhost:~# /home/StatisticalServer/c2exe.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/Criss/jl/ scriptFile=/home/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
 
 控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( , ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
