@@ -25,6 +25,7 @@
 
 4. 借用「scipy」項目的優化模組「optimize」的「root」函數，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
 </p>
+
 ---
 
 一. Interface.jl , Interface.py
