@@ -1,6 +1,6 @@
 ## 統計計算服務器 StatisticalServer
 #### Julia, Python
-#### 使用「Criss」倉庫的「Interface.jl」和「Interface.py」項目，搭建可擴展的統計運算服務器框架（Scalable statistical calculation server framework），借用 Julia 和 Python 程式設計語言（Computer programming language）實現算法（Algorithm）.
+#### 借用「Criss」倉庫「Interface.jl」和「Interface.py」項目，搭建可擴展的統計計算服務器框架（scalable statistical calculation server frame），並借用第三方擴展包（third-party extensions ( libraries or modules )），分別使用 Julia 和 Python 程式設計語言（computer programming language）各自獨立實現的竝立兩套方案算法（algorithm）.
 ---
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;>
 一. 使用外設硬盤 ( Hard Disk ) 作橋 ( Intermediary ), 創建監聽硬盤 ( Hard Disk ) 文檔 ( file ) 的伺服器 ( file_Monitor ), 監聽自定義指定的媒介文檔, 從自定義指定的輸入文檔 ( monitor_file ) 讀取數據 ( Data ), 經過運算 ( Data Processing ), 將運算結果 ( Data ) 寫入自定義指定的輸出文檔 ( output_file ), 從而完成一次跨語言 ( Cross Language ) 的數據交換 ( Information exchange ).
