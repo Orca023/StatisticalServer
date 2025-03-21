@@ -420,7 +420,7 @@ root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/h
 
 3. (選), (鍵 configFile 固定, 值 /home/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  configFile=/home/StatisticalServer/config.txt
 
-4. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3 ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Node.js 語言, 預設值爲 :  executableFile=/bin/julia
+4. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3 ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  executableFile=/bin/julia
 
 5. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/
 
@@ -452,7 +452,7 @@ C:\StatisticalServer> chcp 65001
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\StatisticalServer> C:/StatisticalServer/c2exe.exe configFile=C:/Criss/config.txt executableFile=C:/Criss/Julia/Julia-1.10.4/julia.exe interpreterFile=-p,4,--project=C:/Criss/jl/ scriptFile=C:/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=C:/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=C:/Criss/Intermediary/,monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt,output_dir=C:/Criss/Intermediary/,output_file=C:/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=C:/Criss/temp/
+C:\StatisticalServer> C:/StatisticalServer/c2exe.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
@@ -466,21 +466,21 @@ root@localhost:~# /bin/gcc /home/StatisticalServer/c/c2exe.c -o /home/Statistica
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /home/StatisticalServer/c2exe.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/Criss/jl/ scriptFile=/home/Criss/jl/application.jl configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+root@localhost:~# /home/StatisticalServer/c2exe.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 
 控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( , ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
-1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( c2exe.c ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  C:/Criss/c2exe.exe
+1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( c2exe.c ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  C:/StatisticalServer/c2exe.exe
 
-2. (選) (值 C:/Criss/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/Criss/config.txt
+2. (選) (值 C:/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/StatisticalServer/config.txt
 
-3. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3, /bin/node ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Node.js 語言, 預設值爲 :  executableFile=/bin/julia
+3. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3 ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  executableFile=/bin/julia
 
-4. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/Criss/jl/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 Node.js ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 代碼文檔 c2exe.c 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 Node.js ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/Criss/jl/
+4. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 代碼文檔 c2exe.c 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/
 
-5. (選), (鍵 scriptFile 固定, 值 /home/Criss/jl/application.jl 自定義, 例如 [ /home/Criss/jl/application.jl, /home/Criss/py/application.py, /home/Criss/js/application.js ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 Node.js ) 代碼脚本 ( Script ) 檔 ( application.jl, application.py, application.js ) 的存儲路徑全名, 預設值爲 :  scriptFile=/home/Criss/jl/application.jl
+5. (選), (鍵 scriptFile 固定, 值 /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl 自定義, 例如 [ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl, /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的存儲路徑全名, 預設值爲 :  scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
 
-6. (選), (鍵 configInstructions 固定, 取值自定義, 且可爲空, 即取 configInstructions= 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 Node.js ) 代碼脚本 ( Script ) 檔 ( application.jl, application.py, application.js ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 代碼文檔 c2exe.c 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入代碼脚本 ( Script ) 檔 ( application.jl, application.py, application.js ) 的運行環境, 預設值爲 :  configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=file_Monitor,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+6. (選), (鍵 configInstructions 固定, 取值自定義, 且可爲空, 即取 configInstructions= 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 代碼文檔 c2exe.c 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行環境, 預設值爲 :  configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 
 ![]()
 
