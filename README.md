@@ -3,11 +3,11 @@
 #### 使用「Criss」倉庫（repositories）「Interface.jl」和「Interface.py」模組（module），搭建可擴展的統計計算服務器框架（scalable statistical calculation server frame），借用第三方擴展模組（third-party extensions ( libraries or modules )），分別使用 Julia 和 Python 程式設計語言（computer programming language）各自獨立實現的竝立兩套方案算法（algorithm）.
 ---
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;>
-一. 其中 StatisticalServerJulia 項目，使用 Julia 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「HTTP.jl」「JSON.jl」「LsqFit.jl」「Interpolations.jl」「DataInterpolations.jl」「Roots.jl」實現.
+一. 其中「StatisticalServerJulia」項目，使用 Julia 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「HTTP.jl」「JSON.jl」「LsqFit.jl」「Interpolations.jl」「DataInterpolations.jl」「Roots.jl」實現.
 
 1. 借用「HTTP.jl」模組，實現 http 協議 web 服務器（server）功能.
 
-2. 借用「JSON.jl」模組，實現 Julia 原生數據類型字典（Base.Dict）對象（Object）與 JSON 字符串（String）對象之間，相互轉換數據類型.
+2. 借用「JSON.jl」模組，實現 Julia 原生數據類型字典（Base.Dict）對象（Object）與 JSON 字符串（String）對象（Object）之間，數據類型相互轉換.
 
 3. 借用「LsqFit.jl」模組，實現任意形式自定義初等函數方程擬合（Fit）運算.
 
@@ -15,7 +15,17 @@
 
 5. 借用「Roots.jl」模組，實現任意形式自定義初等函數一元方程求根（Solving Equation），即求解反函數（Inverse）.
 
-二. 使用外設網卡 ( Network Interface Card ) 作橋 ( Intermediary ), 創建監聽伺服器 ( http_Server ), 創建用戶端鏈接器 ( http_Client ), 伺服器 ( http_Server ) 監聽指定網卡 ( Network Interface Card ) 的自定義的埠 ( Port ), 從指定的埠號讀取用戶端 ( http_Client ) 發送的請求數據 ( required ), 經過運算 ( Data Processing ), 將運算結果 ( Response ) 回饋至對應發送請求的用戶端 ( http_Client ), 從而完成一次跨語言 ( Cross Language ) 的數據交換 ( Information exchange ).
+二. 其中「StatisticalServerPython」項目，使用 Python3 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「HTTP.jl」「JSON.jl」「LsqFit.jl」「Interpolations.jl」「DataInterpolations.jl」「Roots.jl」實現.
+
+1. 借用「HTTP.jl」模組，實現 http 協議 web 服務器（server）功能.
+
+2. 借用「JSON.jl」模組，實現 Julia 原生數據類型字典（Base.Dict）對象（Object）與 JSON 字符串（String）對象（Object）之間，數據類型相互轉換.
+
+3. 借用「LsqFit.jl」模組，實現任意形式自定義初等函數方程擬合（Fit）運算.
+
+4. 借用「Interpolations.jl」和「DataInterpolations.jl」模組，實現插值（Interpolation）運算.
+
+5. 借用「Roots.jl」模組，實現任意形式自定義初等函數一元方程求根（Solving Equation），即求解反函數（Inverse）.e ).
 </p>
 
 ---
