@@ -3,29 +3,27 @@
 #### 使用「Criss」倉庫（repositories）「Interface.jl」和「Interface.py」模組（module），搭建可擴展的統計計算服務器框架（scalable statistical calculation server frame），借用第三方擴展模組（third-party extensions ( libraries or modules )），分別使用 Julia 和 Python 程式設計語言（computer programming language）各自獨立實現的竝立兩套方案算法（algorithm）.
 ---
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;>
-一. 其中「StatisticalServerJulia」項目，使用 Julia 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「HTTP.jl」「JSON.jl」「LsqFit.jl」「Interpolations.jl」「DataInterpolations.jl」「Roots.jl」實現.
+一. 其中「StatisticalServerJulia」項目，使用 Julia 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「HTTP」「JSON」「LsqFit」「Interpolations」「DataInterpolations」「Roots」實現.
 
-1. 借用「HTTP.jl」模組，實現 http 協議 web 服務器（server）功能.
+1. 借用「HTTP」模組，實現 http 協議 web 服務器（server）功能.
 
-2. 借用「JSON.jl」模組，實現 Julia 原生數據類型字典（Base.Dict）對象（Object）與 JSON 字符串（String）對象（Object）之間，數據類型相互轉換.
+2. 借用「JSON」模組，實現 Julia 原生數據類型字典（Base.Dict）對象（Object）與 JSON 字符串（String）對象（Object）之間，數據類型相互轉換.
 
-3. 借用「LsqFit.jl」模組，實現任意形式自定義初等函數方程擬合（Fit）運算.
+3. 借用「LsqFit」模組，實現任意形式自定義初等函數方程擬合（Fit）運算.
 
-4. 借用「Interpolations.jl」和「DataInterpolations.jl」模組，實現插值（Interpolation）運算.
+4. 借用「Interpolations」和「DataInterpolations」模組，實現插值（Interpolation）運算.
 
-5. 借用「Roots.jl」模組，實現任意形式自定義初等函數一元方程求根（Solving Equation），即求解反函數（Inverse）.
+5. 借用「Roots」模組，實現任意形式自定義初等函數一元方程求根（Solving Equation），即求解反函數（Inverse）.
 
-二. 其中「StatisticalServerPython」項目，使用 Python3 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「HTTP.jl」「JSON.jl」「LsqFit.jl」「Interpolations.jl」「DataInterpolations.jl」「Roots.jl」實現.
+二. 其中「StatisticalServerPython」項目，使用 Python3 程式設計語言（computer programming language），借用第三方擴展模組（third-party extensions ( libraries or modules )）：「numpy」「scipy」實現.
 
-1. 借用「HTTP.jl」模組，實現 http 協議 web 服務器（server）功能.
+1. 借用「numpy」模組，實現基礎數學向量（Vector）運算.
 
-2. 借用「JSON.jl」模組，實現 Julia 原生數據類型字典（Base.Dict）對象（Object）與 JSON 字符串（String）對象（Object）之間，數據類型相互轉換.
+2. 借用「scipy」項目的優化模組「optimize」的「curve_fit」函數，實現任意形式自定義初等函數方程擬合（Fit）運算.
 
-3. 借用「LsqFit.jl」模組，實現任意形式自定義初等函數方程擬合（Fit）運算.
+3. 借用「scipy」項目的插值模組「interpolate」的「make_interp_spline」「BSpline」「interp1d」「UnivariateSpline」「lagrange」函數，實現插值（Interpolation）運算.
 
-4. 借用「Interpolations.jl」和「DataInterpolations.jl」模組，實現插值（Interpolation）運算.
-
-5. 借用「Roots.jl」模組，實現任意形式自定義初等函數一元方程求根（Solving Equation），即求解反函數（Inverse）.e ).
+4. 借用「scipy」項目的優化模組「optimize」的「root」函數，實現任意形式自定義初等函數一元方程求根（Solving Equation），即求解反函數（Inverse）.
 </p>
 
 ---
