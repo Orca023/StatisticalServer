@@ -94,13 +94,13 @@ https://github.com/python/cpython.git
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=file_Monitor webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
 
 微軟視窗系統 ( Window10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=file_Monitor webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
 
 控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( SPACE ) ( 00100000 ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
@@ -324,48 +324,25 @@ https://github.com/JuliaRegistries/General.git
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/Criss/jl/ /home/Criss/jl/application.jl configFile=/home/Criss/jl/config.txt interface_Function=file_Monitor webPath=/home/Criss/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 is_monitor=false isDoTasksOrThreads=Tasks isMonitorThreadsOrProcesses=0 time_sleep=0.02 monitor_dir=/home/Criss/Intermediary/ monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt output_dir=/home/Criss/Intermediary/ output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt temp_cache_IO_data_dir=/home/Criss/temp/
+root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 
 微軟視窗系統 ( Window10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\Criss> C:/Criss/Julia/Julia-1.10.4/bin/julia.exe -p 4 --project=C:/Criss/jl/ C:/Criss/jl/application.jl configFile=C:/Criss/jl/config.txt interface_Function=file_Monitor webPath=C:/Criss/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 is_monitor=false isDoTasksOrThreads=Tasks isMonitorThreadsOrProcesses=0 time_sleep=0.02 monitor_dir=C:/Criss/Intermediary/ monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt output_dir=C:/Criss/Intermediary/ output_file=C:/Criss/Intermediary/intermediary_write_Julia.txt temp_cache_IO_data_dir=C:/Criss/temp/
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 
 控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( SPACE ) ( 00100000 ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
-1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  C:/Criss/Julia/Julia-1.10.4/bin/julia.exe
+1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe
 
-2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( application.jl ) 的存儲路徑全名, 預設值爲 :  C:/Criss/jl/application.jl
+2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
 
-   注意, 因爲「application.jl」檔中脚本代碼需要加載引入「Interface.jl」檔, 所以需要保持「application.jl」檔與「Interface.jl」檔在相同目錄下, 不然就需要手動修改「application.jl」檔中有關引用「Interface.jl」檔的加載路徑代碼, 以確保能正確引入「Interface.jl」檔.
+   注意, 因爲「StatisticalAlgorithmServer.jl」檔中脚本代碼需要加載引入「Interface.jl」檔, 所以需要保持「StatisticalAlgorithmServer.jl」檔與「Interface.jl」檔在相同目錄下, 不然就需要手動修改「StatisticalAlgorithmServer.jl」檔中有關引用「Interface.jl」檔的加載路徑代碼, 以確保能正確引入「Interface.jl」檔.
 
-3. (選), (鍵 configFile 固定, 值 C:/Criss/jl/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  configFile=C:/Criss/jl/config.txt
+3. (選), (鍵 configFile 固定, 值 C:/StatisticalServer/StatisticalServerJulia/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt
 
 4. (選), (鍵 interface_Function 固定, 值 file_Monitor 自定義, [ file_Monitor, http_Server, http_Client ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  interface_Function=file_Monitor
-
-以下是當參數 : interface_Function 取 : file_Monitor 值時, 可在控制臺命令列傳入的參數 :
-
-5. (選), (鍵 is_monitor 固定, 值 false 自定義, [ true, false ] 取其一), 用於判斷只運行一次, 還是保持文檔監聽, 預設值爲 :  is_monitor=false
-
-6. (選), (鍵 time_sleep 固定, 值 0.02 自定義), 用於傳入監聽文檔輪詢延遲時長，單位 ( Unit ) 爲秒 ( Second ), 預設值爲 :  time_sleep=0.02
-
-7. (選), (鍵 number_Worker_threads 固定, 值 0 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  number_Worker_threads=0
-
-8. (選), (鍵 isDoTasksOrThreads 固定, 值 Tasks 自定義, 例如 [ Tasks, Multi-Threading ] 取其一), 用於選擇並發種類, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 Multi-Threading 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量：export JULIA_NUM_THREADS=4(Linux OSX) 或 set JULIA_NUM_THREADS=4(Windows) 來設置預創建多個缐程, 預設值爲 : 
- isDoTasksOrThreads=Tasks
-
-9. (選), (鍵 isMonitorThreadsOrProcesses 固定, 值 Multi-Threading 自定義, 例如 [ 0, Multi-Threading, Multi-Processes ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 取 0 值表示不開啓並發架構, 預設值爲 :  isMonitorThreadsOrProcesses=0
-
-10. (選), (鍵 monitor_dir 固定, 值 C:/Criss/Intermediary/ 自定義), 用於接收傳值的媒介目錄 ( 監聽文件夾 ) 存儲路徑全名, 預設值爲 :  monitor_dir=C:/Criss/Intermediary/
-
-11. (選), (鍵 monitor_file 固定, 值 C:/Criss/Intermediary/intermediary_write_C.txt 自定義), 用於接收傳值的媒介文檔 ( 監聽文檔 ) 存儲路徑全名, 預設值爲 :  monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt
-
-12. (選), (鍵 output_dir 固定, 值 C:/Criss/Intermediary/ 自定義), 用於輸出運算結果傳值的媒介目錄 ( 運算結果文檔儲存文件夾 ) 存儲路徑全名, 預設值爲 :  output_dir=C:/Criss/Intermediary/
-
-13. (選), (鍵 output_file 固定, 值 C:/Criss/Intermediary/intermediary_write_Nodejs.txt 自定義), 用於輸出運算結果傳值的媒介文檔 ( 運算結果輸出保存文檔 ) 存儲路徑全名, 預設值爲 :  output_file=C:/Criss/Intermediary/intermediary_write_Nodejs.txt
-
-14. (選), (鍵 temp_cache_IO_data_dir 固定, 值 C:/Criss/temp/ 自定義), 用於暫存傳入傳出數據的臨時媒介文件夾路徑全名, 預設值爲 :  temp_cache_IO_data_dir=C:/Criss/temp/
 
 以下是當參數 : interface_Function 取 : http_Server 值時, 可在控制臺命令列傳入的參數 :
 
@@ -379,7 +356,7 @@ C:\Criss> C:/Criss/Julia/Julia-1.10.4/bin/julia.exe -p 4 --project=C:/Criss/jl/ 
 
 18. (選), (鍵 isConcurrencyHierarchy 固定, 值 Tasks 自定義, 例如 [ Tasks, Multi-Threading, Multi-Processes ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 Multi-Threading 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量：export JULIA_NUM_THREADS=4(Linux OSX) 或 set JULIA_NUM_THREADS=4(Windows) 來設置預創建多個缐程, 預設值爲 :  isConcurrencyHierarchy=Tasks
 
-19. (選), (鍵 webPath 固定, 值 C:/Criss/html/ 自定義), 用於傳入伺服器 ( http_Server ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  webPath=C:/Criss/html/
+19. (選), (鍵 webPath 固定, 值 C:/StatisticalServer/html/ 自定義), 用於傳入伺服器 ( http_Server ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  webPath=C:/StatisticalServer/html/
 
 20. (選), (鍵 readtimeout 固定, 值 0 自定義), 用於傳入客戶端請求數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 0 值表示不做判斷是否超時, 預設值爲 :  readtimeout=0
 
