@@ -54,7 +54,7 @@
 
 ---
 
-Python : Interface.py, StatisticalAlgorithmServer.py , Router.py , Interpolation_Fitting.py
+Python3 Explain : Interface.py , StatisticalAlgorithmServer.py , Router.py , Interpolation_Fitting.py
 
 計算機程式設計語言 ( Python ) 解釋器 ( Interpreter ) 與作業系統 ( Operating System ) 環境配置釋明 :
 
@@ -86,7 +86,7 @@ https://github.com/python
 [程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/python/cpython): 
 https://github.com/python/cpython.git
 
----
+![]()
 
 使用説明:
 
@@ -94,23 +94,23 @@ https://github.com/python/cpython.git
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /usr/bin/python3 /home/Criss/py/application.py configFile=/home/Criss/py/config.txt interface_Function=file_Monitor webPath=/home/Criss/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0 is_Monitor_Concurrent=Multi-Threading is_monitor=False time_sleep=0.02 monitor_dir=/home/Criss/Intermediary/ monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt output_dir=/home/Criss/Intermediary/ output_file=/home/Criss/Intermediary/intermediary_write_Python.txt temp_cache_IO_data_dir=/home/Criss/temp/
+root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=file_Monitor webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0 is_Monitor_Concurrent=Multi-Threading is_monitor=False time_sleep=0.02 monitor_dir=/home/StatisticalServer/Intermediary/ monitor_file=/home/StatisticalServer/Intermediary/intermediary_write_C.txt output_dir=/home/StatisticalServer/Intermediary/ output_file=/home/StatisticalServer/Intermediary/intermediary_write_Python.txt temp_cache_IO_data_dir=/home/StatisticalServer/temp/
 
 微軟視窗系統 ( Window10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\Criss> C:/Criss/Python/Python-3.12.4/python.exe C:/Criss/py/application.py configFile=C:/Criss/py/config.txt interface_Function=file_Monitor webPath=C:/Criss/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0 is_Monitor_Concurrent=Multi-Threading is_monitor=False time_sleep=0.02 monitor_dir=C:/Criss/Intermediary/ monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt output_dir=C:/Criss/Intermediary/ output_file=C:/Criss/Intermediary/intermediary_write_Python.txt temp_cache_IO_data_dir=C:/Criss/temp/
+C:\StatisticalServer> C:/StatisticalServer/Python/Python-3.12.4/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=file_Monitor webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0 is_Monitor_Concurrent=Multi-Threading is_monitor=False time_sleep=0.02 monitor_dir=C:/StatisticalServer/Intermediary/ monitor_file=C:/StatisticalServer/Intermediary/intermediary_write_C.txt output_dir=C:/StatisticalServer/Intermediary/ output_file=C:/StatisticalServer/Intermediary/intermediary_write_Python.txt temp_cache_IO_data_dir=C:/StatisticalServer/temp/
 
 控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( SPACE ) ( 00100000 ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
-1. (必), (自定義), 安裝配置的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  C:/Criss/Python/Python-3.12.4/python.exe
+1. (必), (自定義), 安裝配置的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  C:/StatisticalServer/Python/Python-3.12.4/python.exe
 
-2. (必), (自定義), 語言 ( Python ) 程式代碼脚本 ( Script ) 檔 ( application.py ) 的存儲路徑全名, 預設值爲 :  C:/Criss/py/application.py
+2. (必), (自定義), 語言 ( Python ) 程式代碼脚本 ( Script ) 檔 ( application.py ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/StatisticalServerPython/application.py
 
    注意, 因爲「application.py」檔中脚本代碼需要加載引入「Interface.py」檔, 所以需要保持「application.py」檔與「Interface.py」檔在相同目錄下, 不然就需要手動修改「application.py」檔中有關引用「Interface.py」檔的加載路徑代碼, 以確保能正確引入「Interface.py」檔.
 
-3. (選), (鍵 configFile 固定, 值 C:/Criss/py/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  configFile=C:/Criss/py/config.txt
+3. (選), (鍵 configFile 固定, 值 C:/StatisticalServer/StatisticalServerPython/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  configFile=C:/StatisticalServer/StatisticalServerPython/config.txt
 
 4. (選), (鍵 interface_Function 固定, 值 file_Monitor 自定義, [ file_Monitor, http_Server, http_Client ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  interface_Function=file_Monitor
 
@@ -146,7 +146,7 @@ C:\Criss> C:/Criss/Python/Python-3.12.4/python.exe C:/Criss/py/application.py co
 
 18. (選), (鍵 number_Worker_process 固定, 值 0 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  number_Worker_process=0
 
-19. (選), (鍵 webPath 固定, 值 C:/Criss/html/ 自定義), 用於傳入伺服器 ( http_Server ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  webPath=C:/Criss/html/
+19. (選), (鍵 webPath 固定, 值 C:/StatisticalServer/html/ 自定義), 用於傳入伺服器 ( http_Server ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  webPath=C:/StatisticalServer/html/
 
 以下是當參數 : interface_Function 取 : http_Client 值時, 可在控制臺命令列傳入的參數 :
 
@@ -166,17 +166,13 @@ C:\Criss> C:/Criss/Python/Python-3.12.4/python.exe C:/Criss/py/application.py co
 
 ---
 
-Julia : Interface.jl, application.jl
+Julia Explain : Interface.jl , StatisticalAlgorithmServer.jl , Router.jl , Interpolation_Fitting.jl
 
 計算機程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 與作業系統 ( Operating System ) 環境配置釋明 :
 
-Title: Julia server v20161211
-
-Explain: Julia file server, Julia http server, Julia http client
-
 Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
 
-Interpreter: julia-1.10.4-win64.exe
+Interpreter: julia-1.9.3-win64.exe
 
 Interpreter: julia-1.10.4-linux-x86_64.tar.gz
 
@@ -188,7 +184,7 @@ Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
 程式代碼脚本檔 Interface.jl 裏, 函數 http_Server, http_Client 使用了第三方模組 HTTP.jl , JSON.jl 擴展包 ( packages ),
 
-程式代碼脚本檔 application.jl 裏, 函數 do_data, do_Request, do_Response 使用了第三方模組 JSON.jl 擴展包 ( packages ),
+程式代碼脚本檔 StatisticalAlgorithmServer.jl 和 Router.jl 裏, 函數 do_data, do_Request, do_Response 使用了第三方模組 JSON.jl 擴展包 ( packages ),
 
 所以, 需事先安裝配置成功, 加載導入之後, 才能正常運行.
 
@@ -196,11 +192,11 @@ Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/Criss/jl/
+root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalServer/StatisticalServerJulia/
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\Criss> C:/Criss/Julia/Julia-1.10.4/bin/julia.exe --project=C:/Criss/jl/
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe --project=C:/StatisticalServer/StatisticalServerJulia/
 
 然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
 
@@ -235,6 +231,112 @@ https://github.com/JuliaWeb/HTTP.jl.git
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 JSON.jl 的官方 GitHub 網站倉庫](https://github.com/JuliaIO/JSON.jl): 
 https://github.com/JuliaIO/JSON.jl.git
+
+![]()
+
+Interpreter :
+
+julia - 1.10.4
+
+julia - 1.10.4 - packages :
+
+&nbsp;&nbsp;&nbsp;&nbsp;Artifacts
+
+&nbsp;&nbsp;&nbsp;&nbsp;Base64
+
+&nbsp;&nbsp;&nbsp;&nbsp;BitFlags - 0.1.8
+
+&nbsp;&nbsp;&nbsp;&nbsp;CodecZlib - 0.7.4
+
+&nbsp;&nbsp;&nbsp;&nbsp;ConcurrentUtilities - 2.4.1
+
+&nbsp;&nbsp;&nbsp;&nbsp;Dates
+
+&nbsp;&nbsp;&nbsp;&nbsp;ExceptionUnwrapping - 0.1.10
+
+&nbsp;&nbsp;&nbsp;&nbsp;HTTP - 1.10.8
+
+&nbsp;&nbsp;&nbsp;&nbsp;InteractiveUtils
+
+&nbsp;&nbsp;&nbsp;&nbsp;JLLWrappers - 1.5.0
+
+&nbsp;&nbsp;&nbsp;&nbsp;JSON - 0.21.4
+
+&nbsp;&nbsp;&nbsp;&nbsp;Libdl
+
+&nbsp;&nbsp;&nbsp;&nbsp;Logging
+
+&nbsp;&nbsp;&nbsp;&nbsp;LoggingExtras - 1.0.3
+
+&nbsp;&nbsp;&nbsp;&nbsp;Markdown
+
+&nbsp;&nbsp;&nbsp;&nbsp;MbedTLS - 1.1.9
+
+&nbsp;&nbsp;&nbsp;&nbsp;MbedTLS_jll - 2.28.2+0
+
+&nbsp;&nbsp;&nbsp;&nbsp;Mmap
+
+&nbsp;&nbsp;&nbsp;&nbsp;MozillaCACerts_jll - 2022.10.11
+
+&nbsp;&nbsp;&nbsp;&nbsp;NetworkOptions - 1.2.0
+
+&nbsp;&nbsp;&nbsp;&nbsp;OpenSSL - 1.4.3
+
+&nbsp;&nbsp;&nbsp;&nbsp;OpenSSL_jll - 3.0.13+1
+
+&nbsp;&nbsp;&nbsp;&nbsp;Parsers - 2.8.1
+
+&nbsp;&nbsp;&nbsp;&nbsp;PrecompileTools - 1.2.1
+
+&nbsp;&nbsp;&nbsp;&nbsp;Preferences - 1.4.3
+
+&nbsp;&nbsp;&nbsp;&nbsp;Printf
+
+&nbsp;&nbsp;&nbsp;&nbsp;Random
+
+&nbsp;&nbsp;&nbsp;&nbsp;SHA - 0.7.0
+
+&nbsp;&nbsp;&nbsp;&nbsp;Serialization
+
+&nbsp;&nbsp;&nbsp;&nbsp;SimpleBufferStream - 1.1.0
+
+&nbsp;&nbsp;&nbsp;&nbsp;Sockets
+
+&nbsp;&nbsp;&nbsp;&nbsp;TOML - 1.0.3
+
+&nbsp;&nbsp;&nbsp;&nbsp;Test
+
+&nbsp;&nbsp;&nbsp;&nbsp;TranscodingStreams - 0.10.9
+
+&nbsp;&nbsp;&nbsp;&nbsp;TranscodingStreams.extensions
+
+&nbsp;&nbsp;&nbsp;&nbsp;URIs - 1.5.1
+
+&nbsp;&nbsp;&nbsp;&nbsp;UUIDs
+
+&nbsp;&nbsp;&nbsp;&nbsp;Unicode
+
+&nbsp;&nbsp;&nbsp;&nbsp;Zlib_jll - 1.2.13+0
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
+https://julialang.org/
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方下載頁](https://julialang.org/downloads/): 
+https://julialang.org/downloads/
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/JuliaLang): 
+https://github.com/JuliaLang
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/JuliaLang/julia): 
+https://github.com/JuliaLang/julia.git
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
+https://julialang.org/packages/
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫](https://github.com/JuliaRegistries/General): 
+https://github.com/JuliaRegistries/General.git
+
+---
 
 使用説明:
 
