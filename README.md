@@ -358,6 +358,40 @@ https://github.com/JuliaRegistries/General.git
 
 ![]()
 
+程式設計 Julia 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+
+[Julia - LsqFit 官方手冊](https://julianlsolvers.github.io/LsqFit.jl/latest/): 
+https://julianlsolvers.github.io/LsqFit.jl/latest/
+
+[Julia - LsqFit 官方 GitHub 網站賬戶](https://github.com/JuliaNLSolvers/LsqFit.jl): 
+https://github.com/JuliaNLSolvers/LsqFit.jl.git
+
+[Julia - Interpolations 官方手冊](https://juliamath.github.io/Interpolations.jl/stable/): 
+https://juliamath.github.io/Interpolations.jl/stable/
+
+[Julia - Interpolations 官方 GitHub 網站賬戶](https://github.com/JuliaMath/Interpolations.jl): 
+https://github.com/JuliaMath/Interpolations.jl.git
+
+[Julia - DataInterpolations 官方手冊](https://docs.sciml.ai/DataInterpolations/stable/): 
+https://docs.sciml.ai/DataInterpolations/stable/
+
+[Julia - DataInterpolations 官方 GitHub 網站賬戶](https://github.com/SciML/DataInterpolations.jl): 
+https://github.com/SciML/DataInterpolations.jl.git
+
+[Julia - Roots 官方手冊](https://juliamath.github.io/Roots.jl/stable/): 
+https://juliamath.github.io/Roots.jl/stable/
+
+[Julia - Roots 官方 GitHub 網站賬戶](https://github.com/JuliaMath/Roots.jl): 
+https://github.com/JuliaMath/Roots.jl.git
+
+
+
+
+[Python - numpy 官方 GitHub 網站賬戶](https://github.com/numpy/numpy): 
+https://github.com/numpy/numpy.git
+
+![]()
+
 使用説明:
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
