@@ -9,7 +9,7 @@
 
 2. 借用「JSON」模組，實現 Julia 原生數據類型字典 ( Base.Dict ) 對象 ( Object ) 與 JSON 字符串 ( String ) 對象 ( Object ) 之間，數據類型相互轉換.
 
-3. 借用「LsqFit」模組，實現任意形式自定義初等函數方程擬合 ( Fit ) 運算.
+3. 借用「LsqFit」模組，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
 
 4. 借用「Interpolations」和「DataInterpolations」模組，實現插值 ( Interpolation ) 運算.
 
@@ -19,7 +19,7 @@
 
 1. 借用「numpy」模組，實現基礎數學向量 ( Vector ) 運算.
 
-2. 借用「scipy」項目的優化模組「optimize」的「curve_fit」函數，實現任意形式自定義初等函數方程擬合 ( Fit ) 運算.
+2. 借用「scipy」項目的優化模組「optimize」的「curve_fit」函數，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
 
 3. 借用「scipy」項目的插值模組「interpolate」的「make_interp_spline」「BSpline」「interp1d」「UnivariateSpline」「lagrange」函數，實現插值 ( Interpolation ) 運算.
 
