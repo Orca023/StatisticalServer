@@ -88,6 +88,37 @@ https://github.com/python/cpython.git
 
 ![]()
 
+統計算法 ( algorithm ) 借用的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+
+[Python - numpy 官方網站](https://numpy.org/): 
+https://numpy.org/
+
+[Python - numpy 官方手冊](https://numpy.org/doc/stable/): 
+https://numpy.org/doc/stable/
+
+[Python - numpy 官方 GitHub 網站倉庫頁](https://numpy.org/doc/stable/): 
+https://numpy.org/doc/stable/
+
+[Python - scipy 官方網站](https://scipy.org/): 
+https://scipy.org/
+
+[Python - scipy 官方手冊](https://docs.scipy.org/doc/scipy/): 
+https://docs.scipy.org/doc/scipy/
+
+[Python - scipy 官方 GitHub 網站倉庫頁](https://docs.scipy.org/doc/scipy/): 
+https://docs.scipy.org/doc/scipy/
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
+https://github.com/python
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/python/cpython): 
+https://github.com/python/cpython.git
+
+
+，分別使用 Julia 和 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+
+![]()
+
 使用説明:
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
