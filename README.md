@@ -68,11 +68,9 @@
 代碼脚本檔「administrator.html」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/administrator.html`
 
-逗號 ( , ) 分隔符檔 ( .csv )「calculated.csv」爲計算結果數據，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+逗號 ( , ) 分隔符檔 ( .csv )「calculated.csv」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
 
-逗號 ( , ) 分隔符檔 ( .csv )「LogisticLog5PInputData.csv」爲待計算的原數據，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的數據文檔示例.
-
-![]()
+逗號 ( , ) 分隔符檔 ( .csv )「LogisticLog5PInputData.csv」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的數據文檔示例.
 
 ---
 
