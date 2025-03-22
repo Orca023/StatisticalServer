@@ -658,10 +658,10 @@ https://sourceforge.net/projects/mingw-w64/
 一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 做爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」打開交互界面.
 
 打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-<http://username:password@[::1]:10001/index.html?Key=username:password&algorithmUser=username&algorithmPass=password>
+`http://username:password@[::1]:10001/index.html?Key=username:password&algorithmUser=username&algorithmPass=password`
 
 打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-<http://username:password@[::1]:10001/administrator.html?Key=username:password&algorithmUser=username&algorithmPass=password>
+`http://username:password@[::1]:10001/administrator.html?Key=username:password&algorithmUser=username&algorithmPass=password`
 
 ![]()
 
