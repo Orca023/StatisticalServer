@@ -517,9 +517,9 @@ C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 
 ---
 微軟視窗系統 ( Windows10 x86_64 ) 使用 Batch 代碼脚本檔「startServer.bat」啓動統計運算伺服器「StatisticalServer」 :
 
-Window-cmd : startServer.bat
-
 使用説明:
+
+Window-cmd : startServer.bat
 
 微軟視窗系統 ( Windows10 x86_64 )
 
@@ -539,9 +539,9 @@ C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServ
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用 Shell 代碼脚本檔「startServer.sh」啓動統計運算伺服器「StatisticalServer」 :
 
-Android-Termux-Ubuntu-bash : startServer.sh
-
 使用説明:
+
+Android-Termux-Ubuntu-bash : startServer.sh
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
