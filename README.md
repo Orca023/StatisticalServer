@@ -28,15 +28,15 @@
 
 ---
 
-一. Interface.jl , Interface.py
+一. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Interface.jl , StatisticalServer/StatisticalServerPython/Interface.py
 
 代碼脚本 ( Script ) 檔 : Interface.jl 和 Interface.py 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
 
-二. Interpolation_Fitting.jl , Interpolation_Fitting.py
+二. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl , StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py
 
 代碼脚本 ( Script ) 檔 : Interpolation_Fitting.jl 和 Interpolation_Fitting.py 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
 
-三. Router.jl , Router.py
+三. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Router.jl , StatisticalServer/StatisticalServerPython/Router.py
 
 代碼脚本 ( Script ) 檔 : Router.jl 和 Router.py 引用 ( Import ) 檔 Interpolation_Fitting 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 Interface 的伺服器 ( Server ) 函數. 
 
@@ -46,9 +46,11 @@
 
 其中, 檔 Router.jl 和 Router.py 裏的 : do_Response 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( http_Client ) 接收到從伺服器 ( http_Server ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
 
-二. StatisticalAlgorithmServer.jl , StatisticalAlgorithmServer.py
+四. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl , StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
 
 代碼脚本 ( Script ) 檔 : StatisticalAlgorithmServer.jl 和 StatisticalAlgorithmServer.py 是伺服器（Server）啓動入口，引用 ( Import ) 檔 Interface 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : Router.jl 和 Router.py 裏的 : do_data 和 do_Request 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 Interface 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
+
+五. 檔案夾 ( folder ) : StatisticalServer/Julia/ , StatisticalServer/Python/
 
 ![]()
 
