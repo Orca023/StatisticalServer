@@ -665,13 +665,13 @@ https://sourceforge.net/projects/mingw-w64/
 
 ![]()
 
-二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Request ) 計算.
+二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
 
-其中，項目空間内的「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 運行時，需導入的標準模組 ( Module ) 代碼（必須），可自定義繼續擴展統計方法.
+其中，項目空間内的「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自定義編寫 VBA 代碼，繼續擴展統計方法的連接 ( Client - Request ) 項.
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 打開之後 :
 
-1. 菜單欄 ( Excel menu bar ) 的「加載項 ( Excel Add-in )」→「統計運算 ( Statistics )」→「人機交互介面 ( operation panel )」，爲連接統計運算伺服器「StatisticalServer」做 ( Request ) 計算的操作面板.
+1. 菜單欄 ( Excel menu bar ) 的「加載項 ( Excel Add-in )」→「統計運算 ( Statistics )」→「人機交互介面 ( operation panel )」，爲連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算的操作面板.
 
 2. 菜單欄 ( Excel menu bar ) 的「加載項 ( Excel Add-in )」→「統計運算 ( Statistics )」→「統計運算 ( Statistics server )」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 内，調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( cmd ) 啓動統計運算伺服器「StatisticalServer」的運行指令.
 
