@@ -52,6 +52,26 @@
 
 五. 檔案夾 ( folder ) : StatisticalServer/Julia/ , StatisticalServer/Python/
 
+檔案夾 ( folder )「StatisticalServer/Julia/」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe」路徑.
+
+檔案夾 ( folder )「StatisticalServer/Python/」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「C:/StatisticalServer/Python/Python311/python.exe」路徑.
+
+六. 檔案夾 ( folder ) : StatisticalServer/html/
+
+檔案夾 ( folder )「StatisticalServer/html/」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「StatisticalServer」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
+
+其中 :
+
+代碼脚本檔「index.html」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+`http://[::1]:10001/index.html`
+
+代碼脚本檔「administrator.html」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+`http://[::1]:10001/administrator.html`
+
+逗號 ( , ) 分隔符檔 ( .csv )「calculated.csv」爲計算結果數據，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+
+逗號 ( , ) 分隔符檔 ( .csv )「LogisticLog5PInputData.csv」爲待計算的原數據，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的數據文檔示例.
+
 ![]()
 
 ---
@@ -517,6 +537,7 @@ https://juliahub.com/
 26. (選), (鍵 Cookie 固定, 其中 Cookie 名稱 Session_ID 可以設計爲固定, Cookie 值 request_Key->username:password 可以設計爲自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的 Cookies 值字符串, 預設值爲 :  Cookie=Session_ID=request_Key->username:password
 
 ---
+
 微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動統計運算伺服器「StatisticalServer」 :
 
 使用説明:
@@ -657,7 +678,7 @@ https://sourceforge.net/projects/mingw-w64/
 
 ---
 
-一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 做爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」打開交互界面.
+一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」打開交互介面.
 
 打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
 `http://username:password@[::1]:10001/index.html?Key=username:password&algorithmUser=username&algorithmPass=password`
