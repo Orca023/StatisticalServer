@@ -658,10 +658,10 @@ https://sourceforge.net/projects/mingw-w64/
 一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 做爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」打開交互界面.
 
 打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-http://username:password@[::1]:10001/index.html?Key=username:password&algorithmUser=username&algorithmPass=password
+<http://username:password@[::1]:10001/index.html?Key=username:password&algorithmUser=username&algorithmPass=password>
 
 打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-http://username:password@[::1]:10001/administrator.html?Key=username:password&algorithmUser=username&algorithmPass=password
+<http://username:password@[::1]:10001/administrator.html?Key=username:password&algorithmUser=username&algorithmPass=password>
 
 ![]()
 
@@ -676,6 +676,8 @@ http://username:password@[::1]:10001/administrator.html?Key=username:password&al
 2. 菜單欄 ( Excel menu bar ) 的「加載項 ( Excel Add-in )」→「統計運算 ( Statistics )」→「統計運算 ( Statistics server )」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 内，調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( cmd ) 啓動統計運算伺服器「StatisticalServer」的運行指令.
 
 ![]()
+
+谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
 
 [火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方網站](https://www.mozilla.org/zh-TW/): 
 https://www.mozilla.org/zh-TW/
