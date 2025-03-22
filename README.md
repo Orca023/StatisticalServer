@@ -515,7 +515,7 @@ https://juliahub.com/
 26. (選), (鍵 Cookie 固定, 其中 Cookie 名稱 Session_ID 可以設計爲固定, Cookie 值 request_Key->username:password 可以設計爲自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的 Cookies 值字符串, 預設值爲 :  Cookie=Session_ID=request_Key->username:password
 
 ---
-微軟視窗系統 ( Windows10 x86_64 ) 使用 Batch 代碼脚本檔「startServer.bat」啓動統計運算伺服器「StatisticalServer」 :
+微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動統計運算伺服器「StatisticalServer」 :
 
 使用説明:
 
