@@ -83,7 +83,7 @@ https://www.python.org/downloads/
 [程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
 https://github.com/python
 
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/python/cpython): 
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/python/cpython): 
 https://github.com/python/cpython.git
 
 ![]()
@@ -96,7 +96,7 @@ https://numpy.org/
 [Python - numpy 官方手冊](https://numpy.org/doc/stable/): 
 https://numpy.org/doc/stable/
 
-[Python - numpy 官方 GitHub 網站賬戶](https://github.com/numpy/numpy): 
+[Python - numpy 官方 GitHub 網站倉庫頁](https://github.com/numpy/numpy): 
 https://github.com/numpy/numpy.git
 
 [Python - scipy 官方網站](https://scipy.org/): 
@@ -105,7 +105,7 @@ https://scipy.org/
 [Python - scipy 官方手冊](https://docs.scipy.org/doc/scipy/): 
 https://docs.scipy.org/doc/scipy/
 
-[Python - scipy 官方 GitHub 網站賬戶](https://github.com/scipy/scipy): 
+[Python - scipy 官方 GitHub 網站倉庫頁](https://github.com/scipy/scipy): 
 https://github.com/scipy/scipy.git
 
 [Python - pandas 官方網站](https://pandas.pydata.org/): 
@@ -114,7 +114,7 @@ https://pandas.pydata.org/
 [Python - pandas 官方手冊](https://pandas.pydata.org/docs/): 
 https://pandas.pydata.org/docs/
 
-[Python - pandas 官方 GitHub 網站賬戶](https://github.com/pandas-dev/pandas): 
+[Python - pandas 官方 GitHub 網站倉庫頁](https://github.com/pandas-dev/pandas): 
 https://github.com/pandas-dev/pandas.git
 
 [Python - matplotlib 官方網站](https://matplotlib.org/): 
@@ -123,7 +123,7 @@ https://matplotlib.org/
 [Python - matplotlib 官方手冊](https://matplotlib.org/stable/): 
 https://matplotlib.org/stable/
 
-[Python - matplotlib 官方 GitHub 網站賬戶](https://github.com/matplotlib/matplotlib): 
+[Python - matplotlib 官方 GitHub 網站倉庫頁](https://github.com/matplotlib/matplotlib): 
 https://github.com/matplotlib/matplotlib.git
 
 ![]()
@@ -243,13 +243,13 @@ julia> using JSON
 [程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
 https://julialang.org/packages/
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫](https://github.com/JuliaRegistries/General): 
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫頁](https://github.com/JuliaRegistries/General): 
 https://github.com/JuliaRegistries/General.git
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 HTTP.jl 的官方 GitHub 網站倉庫](https://github.com/JuliaWeb/HTTP.jl): 
+[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 HTTP.jl 的官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
 https://github.com/JuliaWeb/HTTP.jl.git
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 JSON.jl 的官方 GitHub 網站倉庫](https://github.com/JuliaIO/JSON.jl): 
+[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 JSON.jl 的官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
 https://github.com/JuliaIO/JSON.jl.git
 
 ![]()
@@ -347,13 +347,13 @@ https://julialang.org/downloads/
 [程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/JuliaLang): 
 https://github.com/JuliaLang
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/JuliaLang/julia): 
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/JuliaLang/julia): 
 https://github.com/JuliaLang/julia.git
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
 https://julialang.org/packages/
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫](https://github.com/JuliaRegistries/General): 
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫頁](https://github.com/JuliaRegistries/General): 
 https://github.com/JuliaRegistries/General.git
 
 ![]()
@@ -363,32 +363,92 @@ https://github.com/JuliaRegistries/General.git
 [Julia - LsqFit 官方手冊](https://julianlsolvers.github.io/LsqFit.jl/latest/): 
 https://julianlsolvers.github.io/LsqFit.jl/latest/
 
-[Julia - LsqFit 官方 GitHub 網站賬戶](https://github.com/JuliaNLSolvers/LsqFit.jl): 
+[Julia - LsqFit 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/LsqFit.jl): 
 https://github.com/JuliaNLSolvers/LsqFit.jl.git
 
 [Julia - Interpolations 官方手冊](https://juliamath.github.io/Interpolations.jl/stable/): 
 https://juliamath.github.io/Interpolations.jl/stable/
 
-[Julia - Interpolations 官方 GitHub 網站賬戶](https://github.com/JuliaMath/Interpolations.jl): 
+[Julia - Interpolations 官方 GitHub 網站倉庫頁](https://github.com/JuliaMath/Interpolations.jl): 
 https://github.com/JuliaMath/Interpolations.jl.git
 
 [Julia - DataInterpolations 官方手冊](https://docs.sciml.ai/DataInterpolations/stable/): 
 https://docs.sciml.ai/DataInterpolations/stable/
 
-[Julia - DataInterpolations 官方 GitHub 網站賬戶](https://github.com/SciML/DataInterpolations.jl): 
+[Julia - DataInterpolations 官方 GitHub 網站倉庫頁](https://github.com/SciML/DataInterpolations.jl): 
 https://github.com/SciML/DataInterpolations.jl.git
 
 [Julia - Roots 官方手冊](https://juliamath.github.io/Roots.jl/stable/): 
 https://juliamath.github.io/Roots.jl/stable/
 
-[Julia - Roots 官方 GitHub 網站賬戶](https://github.com/JuliaMath/Roots.jl): 
+[Julia - Roots 官方 GitHub 網站倉庫頁](https://github.com/JuliaMath/Roots.jl): 
 https://github.com/JuliaMath/Roots.jl.git
 
+[Julia - ForwardDiff 官方手冊](https://juliadiff.org/ForwardDiff.jl/stable/): 
+https://juliadiff.org/ForwardDiff.jl/stable/
 
+[Julia - ForwardDiff 官方 GitHub 網站倉庫頁](https://github.com/JuliaDiff/ForwardDiff.jl): 
+https://github.com/JuliaDiff/ForwardDiff.jl.git
 
+[Julia - Optim 官方手冊](https://julianlsolvers.github.io/Optim.jl/stable/): 
+https://julianlsolvers.github.io/Optim.jl/stable/
 
-[Python - numpy 官方 GitHub 網站賬戶](https://github.com/numpy/numpy): 
-https://github.com/numpy/numpy.git
+[Julia - Optim 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/Optim.jl.git): 
+https://github.com/JuliaNLSolvers/Optim.jl
+
+[Julia - JuMP 官方網站](https://jump.dev/): 
+https://jump.dev/
+
+[Julia - JuMP 官方手冊](https://jump.dev/JuMP.jl/stable/): 
+https://jump.dev/JuMP.jl/stable/
+
+[Julia - JuMP 官方 GitHub 網站倉庫頁](https://github.com/jump-dev/JuMP.jl): 
+https://github.com/jump-dev/JuMP.jl.git
+
+[Julia - Symbolics 官方手冊](https://docs.sciml.ai/Symbolics/stable/): 
+https://docs.sciml.ai/Symbolics/stable/
+
+[Julia - Symbolics 官方 GitHub 網站倉庫頁](https://github.com/JuliaSymbolics/Symbolics.jl): 
+https://github.com/JuliaSymbolics/Symbolics.jl.git
+
+[Julia - Gadfly 官方手冊](https://gadflyjl.org/stable/): 
+https://gadflyjl.org/stable/
+
+[Julia - Gadfly 官方 GitHub 網站倉庫頁](https://github.com/GiovineItalia/Gadfly.jl): 
+https://github.com/GiovineItalia/Gadfly.jl.git
+
+[Julia - Plots 官方手冊](https://docs.juliaplots.org/stable/): 
+https://docs.juliaplots.org/stable/
+
+[Julia - Plots 官方 GitHub 網站倉庫頁](https://github.com/JuliaPlots/Plots.jl): 
+https://github.com/JuliaPlots/Plots.jl.git
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaPlots」項目官方 GitHub 網站賬戶](https://github.com/JuliaPlots): 
+https://github.com/JuliaPlots
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「GiovineItalia」項目官方 GitHub 網站賬戶](https://github.com/GiovineItalia): 
+https://github.com/GiovineItalia
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaMath」項目官方 GitHub 網站賬戶](https://github.com/JuliaMath): 
+https://github.com/JuliaMath
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaNLSolvers」項目官方 GitHub 網站賬戶](https://github.com/JuliaNLSolvers): 
+https://github.com/JuliaNLSolvers
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「SciML」項目官方 GitHub 網站賬戶](https://github.com/SciML): 
+https://github.com/SciML
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaDiff」項目官方 GitHub 網站賬戶](https://github.com/JuliaDiff): 
+https://github.com/JuliaDiff
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuMP」項目官方 GitHub 網站賬戶](https://github.com/jump-dev): 
+https://github.com/jump-dev
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaSymbolics」項目官方 GitHub 網站賬戶](https://github.com/JuliaSymbolics): 
+https://github.com/JuliaSymbolics
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaHub」項目官方 GitHub 網站賬戶](https://juliahub.com/): 
+https://juliahub.com/
 
 ![]()
 
