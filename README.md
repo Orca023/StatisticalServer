@@ -88,7 +88,7 @@ https://github.com/python/cpython.git
 
 ![]()
 
-統計算法 ( algorithm ) 借用的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+程式設計 Python 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
 
 [Python - numpy 官方網站](https://numpy.org/): 
 https://numpy.org/
@@ -96,8 +96,8 @@ https://numpy.org/
 [Python - numpy 官方手冊](https://numpy.org/doc/stable/): 
 https://numpy.org/doc/stable/
 
-[Python - numpy 官方 GitHub 網站倉庫頁](https://numpy.org/doc/stable/): 
-https://numpy.org/doc/stable/
+[Python - numpy 官方 GitHub 網站賬戶](https://github.com/numpy/numpy): 
+https://github.com/numpy/numpy.git
 
 [Python - scipy 官方網站](https://scipy.org/): 
 https://scipy.org/
@@ -105,17 +105,26 @@ https://scipy.org/
 [Python - scipy 官方手冊](https://docs.scipy.org/doc/scipy/): 
 https://docs.scipy.org/doc/scipy/
 
-[Python - scipy 官方 GitHub 網站倉庫頁](https://docs.scipy.org/doc/scipy/): 
-https://docs.scipy.org/doc/scipy/
+[Python - scipy 官方 GitHub 網站賬戶](https://github.com/scipy/scipy): 
+https://github.com/scipy/scipy.git
 
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
-https://github.com/python
+[Python - pandas 官方網站](https://pandas.pydata.org/): 
+https://pandas.pydata.org/
 
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫](https://github.com/python/cpython): 
-https://github.com/python/cpython.git
+[Python - pandas 官方手冊](https://pandas.pydata.org/docs/): 
+https://pandas.pydata.org/docs/
 
+[Python - pandas 官方 GitHub 網站賬戶](https://github.com/pandas-dev/pandas): 
+https://github.com/pandas-dev/pandas.git
 
-，分別使用 Julia 和 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+[Python - matplotlib 官方網站](https://matplotlib.org/): 
+https://matplotlib.org/
+
+[Python - matplotlib 官方手冊](https://matplotlib.org/stable/): 
+https://matplotlib.org/stable/
+
+[Python - matplotlib 官方 GitHub 網站賬戶](https://github.com/matplotlib/matplotlib): 
+https://github.com/matplotlib/matplotlib.git
 
 ![]()
 
