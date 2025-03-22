@@ -1,4 +1,4 @@
-## 統計計算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
+## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
 #### Julia, Python
 #### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」和「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 和 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
 ---
@@ -515,6 +515,7 @@ C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 
 26. (選), (鍵 Cookie 固定, 其中 Cookie 名稱 Session_ID 可以設計爲固定, Cookie 值 request_Key->username:password 可以設計爲自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的 Cookies 值字符串, 預設值爲 :  Cookie=Session_ID=request_Key->username:password
 
 ---
+微軟視窗系統 ( Windows10 x86_64 ) 使用 Batch 代碼脚本檔「startServer.bat」啓動統計運算伺服器「StatisticalServer」 :
 
 Window-cmd : startServer.bat
 
@@ -534,7 +535,9 @@ C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServ
 
 3. (選) (值 C:/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/StatisticalServer/config.txt
 
----
+![]()
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用 Shell 代碼脚本檔「startServer.sh」啓動統計運算伺服器「StatisticalServer」 :
 
 Android-Termux-Ubuntu-bash : startServer.sh
 
@@ -570,6 +573,10 @@ c2exe.c
 
 使用説明:
 
+![]()
+
+微軟視窗系統 ( Windows10 x86_64 ) 使用二進位可執行檔「StatisticalServer.exe」啓動統計運算伺服器「StatisticalServer」 :
+
 微軟視窗系統 ( Windows10 x86_64 )
 
 Windows10 x86_64 Compiler :
@@ -578,7 +585,7 @@ Minimalist GNU on Windows ( MinGW-w64 ) mingw64-8.1.0-release-posix-seh-rt_v6-re
 
 控制臺命令列 ( cmd ) 運行編譯指令 :
 
-C:\StatisticalServer> C:\MinGW64\bin\gcc.exe C:/StatisticalServer/c/c2exe.c -o C:/StatisticalServer/c2exe.exe
+C:\StatisticalServer> C:\MinGW64\bin\gcc.exe C:/StatisticalServer/c/c2exe.c -o C:/StatisticalServer/StatisticalServer.exe
 
 控制臺命令列 ( cmd ) 運行顯示中文字符指令 :
 
@@ -586,7 +593,11 @@ C:\StatisticalServer> chcp 65001
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 
-C:\StatisticalServer> C:/StatisticalServer/c2exe.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+
+![]()
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用二進位可執行檔「StatisticalServer.exe」啓動統計運算伺服器「StatisticalServer」 :
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
@@ -596,15 +607,17 @@ gcc v9.3.0, g++ v9.3.0
 
 控制臺命令列 ( bash ) 運行編譯指令 :
 
-root@localhost:~# /bin/gcc /home/StatisticalServer/c/c2exe.c -o /home/StatisticalServer/c2exe.exe
+root@localhost:~# /bin/gcc /home/StatisticalServer/c/c2exe.c -o /home/StatisticalServer/StatisticalServer.exe
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 
-root@localhost:~# /home/StatisticalServer/c2exe.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+
+![]()
 
 控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( , ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
-1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( c2exe.c ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  C:/StatisticalServer/c2exe.exe
+1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( c2exe.c ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  C:/StatisticalServer/StatisticalServer.exe
 
 2. (選) (值 C:/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/StatisticalServer/config.txt
 
@@ -641,36 +654,23 @@ https://github.com/niXman/mingw-builds-binaries/releases
 https://sourceforge.net/projects/mingw-w64/
 
 ---
+可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 做爲用戶端 ( Client ) 打開交互界面，地址欄 ( Browser address bar ) 輸入網址 : 
 
-Code Editor : Visual Studio Code , Code-Server , Jupyter-Notebook , Wcode
 
-[代碼編輯器 ( Code Editor ) 之  Visual Studio Code 官方網站](https://code.visualstudio.com/): 
-https://code.visualstudio.com/
 
-[代碼編輯器 ( Code Editor ) 之  Visual Studio Code 官方 GitHub 網站倉庫](https://github.com/microsoft/vscode): 
-https://github.com/microsoft/vscode.git
 
-[代碼編輯器 ( Code Editor ) 之  Code-Server 官方網站](https://coder.com/): 
-https://coder.com/
 
-[代碼編輯器 ( Code Editor ) 之  Code-Server 官方 GitHub 網站倉庫](https://github.com/coder/code-server): 
-https://github.com/coder/code-server.git
+[火狐 ( Mozilla - Firefox ) 瀏覽器官方網站](https://www.mozilla.org/zh-TW/): 
+https://www.mozilla.org/zh-TW/
 
-[代碼編輯器 ( Code Editor ) 之  Jupyter-Notebook 官方網站](https://jupyter.org/): 
-https://jupyter.org/
+[谷歌 ( Google - Chromium ) 瀏覽器官方 GitHub 網站倉庫頁](https://github.com/chromium/chromium): 
+https://github.com/chromium/chromium.git
 
-[代碼編輯器 ( Code Editor ) 之  Jupyter-Notebook 官方網站説明頁](https://docs.jupyter.org/en/latest/): 
-https://docs.jupyter.org/en/latest/
 
-[代碼編輯器 ( Code Editor ) 之  Jupyter-Notebook 官方 GitHub 網站倉庫](https://github.com/jupyter/notebook): 
-https://github.com/jupyter/notebook.git
-
-[代碼編輯器 ( Code Editor ) 之  Wcode 官方 GitHub 網站倉庫](https://github.com/fmsouza/wcode): 
-https://github.com/fmsouza/wcode.git
 
 ---
 
-編譯器 ( Compiler ) , 解釋器 ( Interpreter ) 工具 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1Dtp1PEcFBAnjrzareMtjNg?pwd=me5k) 下載頁: 
+開箱即用 ( out of the box ) ( portable application ) 編譯器 ( Compiler ) , 解釋器 ( Interpreter ) 工具 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1Dtp1PEcFBAnjrzareMtjNg?pwd=me5k) 下載頁: 
 https://pan.baidu.com/s/1Dtp1PEcFBAnjrzareMtjNg?pwd=me5k
 
 提取碼：me5k
