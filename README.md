@@ -46,6 +46,8 @@
 
 其中, 檔 Router.jl 和 Router.py 裏的 : do_Response 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( http_Client ) 接收到從伺服器 ( http_Server ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
 
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
+
 四. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl , StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
 
 代碼脚本 ( Script ) 檔 : StatisticalAlgorithmServer.jl 和 StatisticalAlgorithmServer.py 是伺服器（Server）啓動入口，引用 ( Import ) 檔 Interface 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : Router.jl 和 Router.py 裏的 : do_data 和 do_Request 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 Interface 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
@@ -71,6 +73,14 @@
 逗號 ( , ) 分隔符檔 ( .csv )「calculated.csv」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
 
 逗號 ( , ) 分隔符檔 ( .csv )「LogisticLog5PInputData.csv」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的數據文檔示例.
+
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
+
+七. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticsAlgorithmModule.bas , 微軟電子表格應用檔 ( Windows - Office - Excel ) : StatisticalServer/Client.xlsm
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」可作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
+
+代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
 
 ---
 
@@ -688,7 +698,7 @@ https://sourceforge.net/projects/mingw-w64/
 
 二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
 
-其中，項目空間内的「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自定義編寫 VBA 代碼，繼續擴展統計方法的連接 ( Client - Request ) 項.
+其中，項目空間内的代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自定義編寫 VBA 代碼，繼續擴展統計方法的連接 ( Client - Request ) 項.
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 打開之後，菜單欄 ( Excel menu bar ) 之 :
 
