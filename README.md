@@ -710,10 +710,22 @@ https://sourceforge.net/projects/mingw-w64/
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，使用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON」實現.
 
-三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「StatisticalServer」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
+三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「StatisticalServer」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
 
 使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
 
+1. 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+`http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0&algorithmKei=2&algorithmDi=1&algorithmEith=1`
+
+2. 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+`http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit`
+
+3. 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+`http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit`
+
+用戶端 ( Client - Request ) 發送 POST 請求的數據格式爲 JSON 字符串 ( JSON String ) 類型 ：
+
+伺服器 ( Server - Respond ) 響應 POST 請求的數據格式爲 JSON 字符串 ( JSON String ) 類型 ：
 
 ![]()
 
