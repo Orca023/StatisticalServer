@@ -689,22 +689,29 @@ https://sourceforge.net/projects/mingw-w64/
 一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」打開交互介面.
 
 打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-`http://username:password@[::1]:10001/index.html?Key=username:password&algorithmUser=username&algorithmPass=password`
+`http://username:password@[::1]:10001/index.html?Key=username:password
 
 打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-`http://username:password@[::1]:10001/administrator.html?Key=username:password&algorithmUser=username&algorithmPass=password`
+`http://username:password@[::1]:10001/administrator.html?Key=username:password
 
-![]()
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
 
-二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
+二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
 
-其中，項目空間内的代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自定義編寫 VBA 代碼，繼續擴展統計方法的連接 ( Client - Request ) 項.
-
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 打開之後，菜單欄 ( Excel menu bar ) 之 :
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」打開之後，菜單欄 ( Excel menu bar ) 之 :
 
 1. 「加載項 ( Excel Add-in )」→「統計運算 ( Statistics )」→「人機交互介面 ( operation panel )」，爲連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算的操作面板.
 
 2. 「加載項 ( Excel Add-in )」→「統計運算 ( Statistics )」→「統計運算 ( Statistics server )」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 内，調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( cmd ) 啓動統計運算伺服器「StatisticalServer」的運行指令.
+
+其中，項目空間内的代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」使用的第三方擴展類模組「VBA-JSON」，相互轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型.
+
+三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 LVGL 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「StatisticalServer」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
+
+使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
+
 
 ![]()
 
