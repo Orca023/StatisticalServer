@@ -46,7 +46,7 @@
 
 其中, 檔 Router.jl 和 Router.py 裏的 : do_Response 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( http_Client ) 接收到從伺服器 ( http_Server ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
 
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
+可自行修改代碼脚本 ( script file ) 檔「Router.jl」「Router.py」「Interpolation_Fitting.jl」「Interpolation_Fitting.py」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
 
 四. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl , StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
 
