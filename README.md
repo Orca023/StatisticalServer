@@ -156,6 +156,30 @@ https://matplotlib.org/stable/
 [Python - matplotlib 官方 GitHub 網站倉庫頁](https://github.com/matplotlib/matplotlib): 
 https://github.com/matplotlib/matplotlib.git
 
+[Python - statsmodels 官方手冊](https://www.statsmodels.org/stable/index.html): 
+https://www.statsmodels.org/stable/index.html
+
+[Python - statsmodels 官方 GitHub 網站倉庫頁](https://github.com/statsmodels/statsmodels): 
+https://github.com/statsmodels/statsmodels.git
+
+[Python - sklearn 官方網站](https://scikit-learn.org/stable/): 
+https://scikit-learn.org/stable/
+
+[Python - sklearn 官方手冊](https://scikit-learn.org/stable/user_guide.html): 
+https://scikit-learn.org/stable/user_guide.html
+
+[Python - sklearn 官方 GitHub 網站倉庫頁](https://github.com/scikit-learn/scikit-learn): 
+https://github.com/scikit-learn/scikit-learn.git
+
+[Python - sympy 官方網站](https://www.sympy.org/en/index.html): 
+https://www.sympy.org/en/index.html
+
+[Python - sympy 官方手冊](https://docs.sympy.org/latest/index.html): 
+https://docs.sympy.org/latest/index.html
+
+[Python - sympy 官方 GitHub 網站倉庫頁](https://github.com/sympy/sympy): 
+https://github.com/sympy/sympy.git
+
 ![]()
 
 使用説明:
