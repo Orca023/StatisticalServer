@@ -708,13 +708,20 @@ https://sourceforge.net/projects/mingw-w64/
 
 ![]()
 
-[百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫 ( Apache ECharts ) 官方網站](https://echarts.apache.org/zh/index.html): 
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用，轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 時，使用的第三方擴展類模組「VBA-JSON」説明 :
+
+[微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用第三方擴展類模組 VBA-JSON 官方 GitHub 網站倉庫](https://github.com/VBA-tools/VBA-JSON): 
+https://github.com/VBA-tools/VBA-JSON.git
+
+百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache ECharts」説明 :
+
+[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache ECharts」官方網站](https://echarts.apache.org/zh/index.html): 
 https://echarts.apache.org/zh/index.html
 
-[百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫 ( Apache ECharts ) 官方手冊](https://echarts.apache.org/handbook/zh/get-started/): 
+[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache ECharts」官方手冊](https://echarts.apache.org/handbook/zh/get-started/): 
 https://echarts.apache.org/handbook/zh/get-started/
 
-[百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫 ( Apache ECharts ) 官方 GitHub 網站倉庫頁](https://github.com/apache/echarts): 
+[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache ECharts」官方 GitHub 網站倉庫頁](https://github.com/apache/echarts): 
 https://github.com/apache/echarts.git
 
 谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
@@ -730,6 +737,17 @@ https://github.com/mozilla/gecko-dev.git
 
 [谷歌 ( Google - Chromium ) 瀏覽器官方 GitHub 網站倉庫頁](https://github.com/chromium/chromium): 
 https://github.com/chromium/chromium.git
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用 Microsoft Office Excel Professional 2019 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
+
+[作業系統 ( Operating system ) 之 Microsoft Windows 官方網站](https://www.microsoft.com/zh-tw/windows): 
+https://www.microsoft.com/zh-tw/windows
+
+[電子表格應用 Microsoft Office Excel 官方下載頁](https://www.microsoft.com/zh-tw/download/office): 
+https://www.microsoft.com/zh-tw/download/office
+
+[電子表格應用 Microsoft Office Excel 2019 官方説明頁](https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview): 
+https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
 
 ---
 
