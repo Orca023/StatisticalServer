@@ -46,7 +46,7 @@
 
 其中, 檔 Router.jl 和 Router.py 裏的 : do_Response 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( http_Client ) 接收到從伺服器 ( http_Server ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
 
-可自行修改代碼脚本 ( script file ) 檔「Router.jl」「Router.py」「Interpolation_Fitting.jl」「Interpolation_Fitting.py」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
+可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「Router.jl」「Router.py」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「Interpolation_Fitting.jl」「Interpolation_Fitting.py」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「StatisticalServer」所能提供的計算方法 ( Server Respond ) 的選項.
 
 四. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl , StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
 
@@ -76,7 +76,7 @@
 
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
 
-七. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticsAlgorithmModule.bas , 微軟電子表格應用檔 ( Windows - Office - Excel ) : StatisticalServer/Client.xlsm
+七. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticsAlgorithmModule.bas , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : StatisticalServer/Client.xlsm
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」可作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
 
