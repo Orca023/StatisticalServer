@@ -694,7 +694,7 @@ https://sourceforge.net/projects/mingw-w64/
 打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
 `http://username:password@[::1]:10001/administrator.html?Key=username:password`
 
-交互頁面「index.html」可視化數據圖表，使用第三方擴展包，百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache ECharts」繪圖.
+交互頁面「index.html」可視化數據圖表，使用第三方擴展包，百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache ECharts」實現.
 
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
 
@@ -708,7 +708,7 @@ https://sourceforge.net/projects/mingw-w64/
 
 其中，項目空間内的代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
 
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」使用的第三方擴展類模組「VBA-JSON」，相互轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型.
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，使用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON」實現.
 
 三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「StatisticalServer」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
 
