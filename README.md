@@ -1184,17 +1184,19 @@ https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
 
 提取碼：cy8g
 
-1. 壓縮包 : Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z
+開箱即用 ( out of the box ) ( portable application ) 檔 :
 
-2. 壓縮包 : Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z
+1. 壓縮檔 : Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z
 
-3. 壓縮包 : StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z
+2. 壓縮檔 : Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z
 
-4. 壓縮包 : StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z
+3. 壓縮檔 : StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z
 
-5. 壓縮包 : StatisticalServer-Window10-AMD_FX8800P_x86_64.7z
+4. 壓縮檔 : StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z
 
-6. 壓縮包 : google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
+5. 壓縮檔 : StatisticalServer-Window10-AMD_FX8800P_x86_64.7z
+
+6. 壓縮檔 : google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
 
 7. 二進位可執行檔 : StatisticalServer-Window10-AMD_FX8800P_x86_64.exe
 
