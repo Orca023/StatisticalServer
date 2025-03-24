@@ -3,7 +3,7 @@
 #### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」或「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
 ---
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;>
-一. 其中「StatisticalServerJulia」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「HTTP」「JSON」「LsqFit」「Interpolations」「DataInterpolations」「Roots」實現.
+一. 其中「`StatisticalServerJulia`」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`HTTP`」「`JSON`」「`LsqFit`」「`Interpolations`」「`DataInterpolations`」「`Roots`」實現.
 
 1. 借用「`HTTP`」模組，實現 http 協議 web 伺服器 ( Server ) 功能.
 
