@@ -1215,6 +1215,7 @@ C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/Statis
 5. 壓縮檔 : `StatisticalServer-Window10-AMD_FX8800P_x86_64.7z`
 
 壓縮檔「`StatisticalServer-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'StatisticalServer' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'StatisticalServer' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至根目錄 ( Root Directory ) : `C:` 内，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
+
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
 C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
@@ -1243,6 +1244,7 @@ C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/S
 root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
 ```
 最終保存爲檔案夾 ( folder ) : `/home/StatisticalServer/` 形式，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
+
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
 root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
