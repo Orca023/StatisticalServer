@@ -1,86 +1,86 @@
-## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
+## 統計運算伺服器 `StatisticalServer` : `StatisticalServerJulia` , `StatisticalServerPython`
 #### Julia, Python
-#### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」和「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 和 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+#### 使用「`Criss`」倉庫 ( repositories ) 「`Interface.jl`」或「`Interface.py`」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
 ---
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;>
-一. 其中「StatisticalServerJulia」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「HTTP」「JSON」「LsqFit」「Interpolations」「DataInterpolations」「Roots」實現.
+一. 其中「`StatisticalServerJulia`」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`HTTP`」「`JSON`」「`LsqFit`」「`Interpolations`」「`DataInterpolations`」「`Roots`」實現.
 
-1. 借用「HTTP」模組，實現 http 協議 web 伺服器 ( Server ) 功能.
+1. 借用「`HTTP`」模組，實現 http 協議 web 伺服器 ( Server ) 功能.
 
-2. 借用「JSON」模組，實現 Julia 原生數據類型字典 ( Base.Dict ) 對象 ( Object ) 與 JSON 字符串 ( String ) 對象 ( Object ) 之間，數據類型相互轉換.
+2. 借用「`JSON`」模組，實現 Julia 原生數據類型字典 ( Base.Dict ) 對象 ( Object ) 與 JSON 字符串 ( String ) 對象 ( Object ) 之間，數據類型相互轉換.
 
-3. 借用「LsqFit」模組，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
+3. 借用「`LsqFit`」模組，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
 
-4. 借用「Interpolations」和「DataInterpolations」模組，實現插值 ( Interpolation ) 運算.
+4. 借用「`Interpolations`」和「`DataInterpolations`」模組，實現插值 ( Interpolation ) 運算.
 
-5. 借用「Roots」模組，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
+5. 借用「`Roots`」模組，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
 
-二. 其中「StatisticalServerPython」項目，使用 Python3 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「numpy」「scipy」實現.
+二. 其中「`StatisticalServerPython`」項目，使用 Python3 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`numpy`」「`scipy`」實現.
 
-1. 借用「numpy」模組，實現基礎數學向量 ( Vector ) 運算.
+1. 借用「`numpy`」模組，實現基礎數學向量 ( Vector ) 運算.
 
-2. 借用「scipy」項目的優化模組「optimize」的「curve_fit」函數，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
+2. 借用「`scipy`」項目的優化模組「`optimize`」的「`curve_fit`」函數，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
 
-3. 借用「scipy」項目的插值模組「interpolate」的「make_interp_spline」「BSpline」「interp1d」「UnivariateSpline」「lagrange」函數，實現插值 ( Interpolation ) 運算.
+3. 借用「`scipy`」項目的插值模組「`interpolate`」的「`make_interp_spline`」「`BSpline`」「`interp1d`」「`UnivariateSpline`」「`lagrange`」函數，實現插值 ( Interpolation ) 運算.
 
-4. 借用「scipy」項目的優化模組「optimize」的「root」函數，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
+4. 借用「`scipy`」項目的優化模組「`optimize`」的「`root`」函數，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
 </p>
 
 ---
 
-一. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Interface.jl , StatisticalServer/StatisticalServerPython/Interface.py
+一. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interface.jl` , `StatisticalServer/StatisticalServerPython/Interface.py`
 
-代碼脚本 ( Script ) 檔 : Interface.jl 和 Interface.py 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
+代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
 
-二. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl , StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py
+二. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl` , `StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py`
 
-代碼脚本 ( Script ) 檔 : Interpolation_Fitting.jl 和 Interpolation_Fitting.py 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
+代碼脚本 ( Script ) 檔 : `Interpolation_Fitting.jl` 和 `Interpolation_Fitting.py` 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
 
-三. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Router.jl , StatisticalServer/StatisticalServerPython/Router.py
+三. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Router.jl` , `StatisticalServer/StatisticalServerPython/Router.py`
 
-代碼脚本 ( Script ) 檔 : Router.jl 和 Router.py 引用 ( Import ) 檔 Interpolation_Fitting 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 Interface 的伺服器 ( Server ) 函數. 
+代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 引用 ( Import ) 檔 `Interpolation_Fitting.jl` 或 `Interpolation_Fitting.py` 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 `Interface` 的伺服器 ( Server ) 函數. 
 
-其中, 檔 Router.jl 和 Router.py 裏的 : do_data 函數 ( Function ) 是執行文檔 ( file ) 監聽伺服器 ( file_Monitor ) 讀入的數據分發路由 ( Router ) 功能.
+其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_data` 函數 ( Function ) 是執行文檔 ( file ) 監聽伺服器 ( `file_Monitor` ) 讀入的數據分發路由 ( Router ) 功能.
 
-其中, 檔 Router.jl 和 Router.py 裏的 : do_Request 函數 ( Function ) 是執行網路 ( web ) 伺服器 ( http_Server ) 讀入的從用戶端 ( http_Client ) 發送的請求 ( Request ) 數據的分發路由 ( Router ) 功能.
+其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Request` 函數 ( Function ) 是執行網路 ( web ) 伺服器 ( `http_Server` ) 讀入的從用戶端 ( `http_Client` ) 發送的請求 ( Request ) 數據的分發路由 ( Router ) 功能.
 
-其中, 檔 Router.jl 和 Router.py 裏的 : do_Response 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( http_Client ) 接收到從伺服器 ( http_Server ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
+其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Response` 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( `http_Client` ) 接收到從伺服器 ( `http_Server` ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
 
-可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「Router.jl」「Router.py」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「Interpolation_Fitting.jl」「Interpolation_Fitting.py」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「StatisticalServer」所能提供的計算方法 ( Server Respond ) 的選項.
+可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「`StatisticalServer`」所能提供的計算方法 ( Server Respond ) 的選項.
 
-四. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl , StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
+四. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl` , `StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py`
 
-代碼脚本 ( Script ) 檔 : StatisticalAlgorithmServer.jl 和 StatisticalAlgorithmServer.py 是伺服器（Server）啓動入口，引用 ( Import ) 檔 Interface 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : Router.jl 和 Router.py 裏的 : do_data 和 do_Request 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 Interface 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
+代碼脚本 ( Script ) 檔 : `StatisticalAlgorithmServer.jl` 或 `StatisticalAlgorithmServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
 
-五. 檔案夾 ( folder ) : StatisticalServer/Julia/ , StatisticalServer/Python/
+五. 檔案夾 ( folder ) : `StatisticalServer/Julia/` , `StatisticalServer/Python/`
 
-檔案夾 ( folder )「StatisticalServer/Julia/」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe」路徑.
+檔案夾 ( folder )「`StatisticalServer/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`」路徑.
 
-檔案夾 ( folder )「StatisticalServer/Python/」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「C:/StatisticalServer/Python/Python311/python.exe」路徑.
+檔案夾 ( folder )「`StatisticalServer/Python/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Python/Python311/python.exe`」路徑.
 
-六. 檔案夾 ( folder ) : StatisticalServer/html/
+六. 檔案夾 ( folder ) : `StatisticalServer/html/`
 
-檔案夾 ( folder )「StatisticalServer/html/」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「StatisticalServer」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
+檔案夾 ( folder )「`StatisticalServer/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`StatisticalServer`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
 
 其中 :
 
-代碼脚本檔「index.html」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
-```http://[::1]:10001/index.html```
+代碼脚本檔「`StatisticalServer/html/index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+`http://[::1]:10001/index.html`
 
-代碼脚本檔「administrator.html」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
-```http://[::1]:10001/administrator.html```
+代碼脚本檔「`StatisticalServer/html/administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+`http://[::1]:10001/administrator.html`
 
-逗號 ( , ) 分隔符檔 ( .csv )「calculated.csv」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「index.html」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+逗號 ( , ) 分隔符檔 ( .csv )「`StatisticalServer/html/calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
 
-逗號 ( , ) 分隔符檔 ( .csv )「LogisticLog5PInputData.csv」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「index.html」待計算表格内的數據文檔示例.
+逗號 ( , ) 分隔符檔 ( .csv )「`StatisticalServer/html/LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」待計算表格内的數據文檔示例.
 
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`StatisticalServer/html/index.html`」「`StatisticalServer/html/SelectStatisticalAlgorithms.html`」「`StatisticalServer/html/InputHTML.html`」「`StatisticalServer/html/OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`StatisticalServer/html/index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
-七. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticsAlgorithmModule.bas , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : StatisticalServer/Client.xlsm
+七. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticsAlgorithmModule.bas` , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : `StatisticalServer/Client.xlsm`
 
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」可作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」可作爲用戶端 ( Client ) 連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 計算.
 
-代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
 
 ---
 
@@ -187,22 +187,26 @@ https://github.com/sympy/sympy.git
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
 控制臺命令列 ( bash ) 運行啓動指令 :
-```root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0```
+```
+root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
 
 微軟視窗系統 ( Window10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
-```C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0```
+```
+C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
 
 控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( SPACE ) ( 00100000 ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
-1. (必), (自定義), 安裝配置的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  C:/StatisticalServer/Python/Python311/python.exe
+1. (必), (自定義), 安裝配置的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/Python/Python311/python.exe`
 
-2. (必), (自定義), 語言 ( Python ) 程式代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.py ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
+2. (必), (自定義), 語言 ( Python ) 程式代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.py` ) 的存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py`
 
-   注意, 因爲「StatisticalAlgorithmServer.py」檔中脚本代碼需要加載引入「Interface.py」檔, 所以需要保持「StatisticalAlgorithmServer.py」檔與「Interface.py」檔在相同目錄下, 不然就需要手動修改「StatisticalAlgorithmServer.py」檔中有關引用「Interface.py」檔的加載路徑代碼, 以確保能正確引入「Interface.py」檔.
+   注意, 因爲「`StatisticalAlgorithmServer.py`」檔中脚本代碼需要加載引入「`Interface.py`」檔, 所以需要保持「`StatisticalAlgorithmServer.py`」檔與「`Interface.py`」檔在相同目錄下, 不然就需要手動修改「`StatisticalAlgorithmServer.py`」檔中有關引用「`Interface.py`」檔的加載路徑代碼, 以確保能正確引入「`Interface.py`」檔.
 
-3. (選), (鍵 configFile 固定, 值 C:/StatisticalServer/StatisticalServerPython/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  configFile=C:/StatisticalServer/StatisticalServerPython/config.txt
+3. (選), (鍵 `configFile` 固定, 值 `C:/StatisticalServer/StatisticalServerPython/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/StatisticalServer/StatisticalServerPython/config.txt`
 
 4. (選), (鍵 interface_Function 固定, 值 file_Monitor 自定義, [ file_Monitor, http_Server, http_Client ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  interface_Function=file_Monitor
 
