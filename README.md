@@ -1,10 +1,11 @@
 ## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
-#### Julia, Python
+#### Julia , Python
 #### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」或「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
 
 ---
 
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;></p>
+
 一. 其中「`StatisticalServerJulia`」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`HTTP`」「`JSON`」「`LsqFit`」「`Interpolations`」「`DataInterpolations`」「`Roots`」實現.
 
 1. 借用「`HTTP`」模組，實現 http 協議 web 伺服器 ( Server ) 功能.
@@ -1182,3 +1183,20 @@ https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
 https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
 
 提取碼：cy8g
+
+1. 壓縮包 : Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z
+
+2. 壓縮包 : Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z
+
+3. 壓縮包 : StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z
+
+4. 壓縮包 : StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z
+
+5. 壓縮包 : StatisticalServer-Window10-AMD_FX8800P_x86_64.7z
+
+6. 壓縮包 : google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
+
+7. 二進位可執行檔 : StatisticalServer-Window10-AMD_FX8800P_x86_64.exe
+
+8. 二進位可執行檔 : StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe
+
