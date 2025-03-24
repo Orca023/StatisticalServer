@@ -1,9 +1,9 @@
-## 統計運算伺服器 `StatisticalServer` : `StatisticalServerJulia` , `StatisticalServerPython`
+## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
 #### Julia, Python
-#### 使用「`Criss`」倉庫 ( repositories ) 「`Interface.jl`」或「`Interface.py`」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+#### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」或「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
 ---
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;>
-一. 其中「`StatisticalServerJulia`」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`HTTP`」「`JSON`」「`LsqFit`」「`Interpolations`」「`DataInterpolations`」「`Roots`」實現.
+一. 其中「StatisticalServerJulia」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「HTTP」「JSON」「LsqFit」「Interpolations」「DataInterpolations」「Roots」實現.
 
 1. 借用「`HTTP`」模組，實現 http 協議 web 伺服器 ( Server ) 功能.
 
@@ -28,15 +28,15 @@
 
 ---
 
-一. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interface.jl` , `StatisticalServer/StatisticalServerPython/Interface.py`
+一. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Interface.jl , StatisticalServer/StatisticalServerPython/Interface.py
 
 代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
 
-二. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl` , `StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py`
+二. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl , StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py
 
 代碼脚本 ( Script ) 檔 : `Interpolation_Fitting.jl` 和 `Interpolation_Fitting.py` 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
 
-三. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Router.jl` , `StatisticalServer/StatisticalServerPython/Router.py`
+三. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/Router.jl , StatisticalServer/StatisticalServerPython/Router.py
 
 代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 引用 ( Import ) 檔 `Interpolation_Fitting.jl` 或 `Interpolation_Fitting.py` 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 `Interface` 的伺服器 ( Server ) 函數. 
 
@@ -48,39 +48,39 @@
 
 可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「`StatisticalServer`」所能提供的計算方法 ( Server Respond ) 的選項.
 
-四. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl` , `StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py`
+四. 代碼脚本檔 ( script file ) : StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl , StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
 
 代碼脚本 ( Script ) 檔 : `StatisticalAlgorithmServer.jl` 或 `StatisticalAlgorithmServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
 
-五. 檔案夾 ( folder ) : `StatisticalServer/Julia/` , `StatisticalServer/Python/`
+五. 檔案夾 ( folder ) : StatisticalServer/Julia/ , StatisticalServer/Python/
 
 檔案夾 ( folder )「`StatisticalServer/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`」路徑.
 
 檔案夾 ( folder )「`StatisticalServer/Python/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Python/Python311/python.exe`」路徑.
 
-六. 檔案夾 ( folder ) : `StatisticalServer/html/`
+六. 檔案夾 ( folder ) : StatisticalServer/html/
 
 檔案夾 ( folder )「`StatisticalServer/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`StatisticalServer`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
 
 其中 :
 
-代碼脚本檔「`StatisticalServer/html/index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+代碼脚本檔「`index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/index.html`
 
-代碼脚本檔「`StatisticalServer/html/administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/administrator.html`
 
-逗號 ( , ) 分隔符檔 ( .csv )「`StatisticalServer/html/calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+逗號 ( , ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
 
-逗號 ( , ) 分隔符檔 ( .csv )「`StatisticalServer/html/LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`StatisticalServer/html/index.html`」待計算表格内的數據文檔示例.
+逗號 ( , ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
 
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`StatisticalServer/html/index.html`」「`StatisticalServer/html/SelectStatisticalAlgorithms.html`」「`StatisticalServer/html/InputHTML.html`」「`StatisticalServer/html/OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`StatisticalServer/html/index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
 七. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticsAlgorithmModule.bas` , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : `StatisticalServer/Client.xlsm`
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」可作爲用戶端 ( Client ) 連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 計算.
 
-代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+代碼脚本檔「`StatisticsAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
 
 ---
 
@@ -208,37 +208,37 @@ C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/Statis
 
 3. (選), (鍵 `configFile` 固定, 值 `C:/StatisticalServer/StatisticalServerPython/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/StatisticalServer/StatisticalServerPython/config.txt`
 
-4. (選), (鍵 interface_Function 固定, 值 file_Monitor 自定義, [ file_Monitor, http_Server, http_Client ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  interface_Function=file_Monitor
+4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
 
-以下是當參數 : interface_Function 取 : http_Server 值時, 可在控制臺命令列傳入的參數 :
+以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
 
-14. (選), (鍵 host 固定, 值 ::0 自定義, 例如 [ ::0, ::1, 0.0.0.0, 127.0.0.1 ] 取其一), 用於傳入伺服器 ( http_Server ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6, IPv4 ) 或域名, 預設值爲 :  host=::0
+14. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( `IPv6`, `IPv4` ) 或域名, 預設值爲 :  `host=::0`
 
-15. (選), (鍵 port 固定, 值 10001 自定義), 用於傳入伺服器 ( http_Server ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( 1 ~ 65535 ), 預設值爲 :  port=10001
+15. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
 
-16. (選), (鍵 Key 固定, 賬號密碼連接符 : 固定, 值 username 和 password 自定義), 用於傳入自定義的訪問網站驗證 ( Authorization ) 用戶名和密碼, 預設值爲 :  Key=username:password
+16. (選), (鍵 `Key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `Key=username:password`
 
-17. (選), (鍵 Is_multi_thread 固定, 值 False 自定義, 例如 [ True, False ] 取其一), 用於判斷是否開啓多缐程 ( Threading ) 並發, 預設值爲 :  Is_multi_thread=False
+17. (選), (鍵 `Is_multi_thread` 固定, 值 `False` 自定義, 例如 [ `True`, `False` ] 取其一), 用於判斷是否開啓多缐程 ( Threading ) 並發, 預設值爲 :  `Is_multi_thread=False`
 
-18. (選), (鍵 number_Worker_process 固定, 值 0 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  number_Worker_process=0
+18. (選), (鍵 `number_Worker_process` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  `number_Worker_process=0`
 
-19. (選), (鍵 webPath 固定, 值 C:/StatisticalServer/html/ 自定義), 用於傳入伺服器 ( http_Server ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  webPath=C:/StatisticalServer/html/
+19. (選), (鍵 `webPath` 固定, 值 `C:/StatisticalServer/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/StatisticalServer/html/`
 
-以下是當參數 : interface_Function 取 : http_Client 值時, 可在控制臺命令列傳入的參數 :
+以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
 
-14. (選), (鍵 host 固定, 值 ::1 自定義, 例如 [ ::1, 127.0.0.1, localhost ] 取其一), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6, IPv4 ) 或域名, 預設值爲 :  host=::1
+14. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( `IPv6`, `IPv4` ) 或域名, 預設值爲 :  `host=::1`
 
-15. (選), (鍵 port 固定, 值 10001 自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( 1 ~ 65535 ), 預設值爲 :  port=10001
+15. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
 
-20. (選), (鍵 URL 固定, 值 / 自定義, 例如配置爲 http://[::1]:10001/index.html 值), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  URL=/
+20. (選), (鍵 `URL` 固定, 值 `/` 自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=/`
 
-21. (選), (鍵 Method 固定, 值 POST 自定義, 例如 [ POST, GET ] 取其一), 用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  Method=POST
+21. (選), (鍵 `Method` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `Method=POST`
 
-22. (選), (鍵 time_out 固定, 值 0.5 自定義), 用於傳入設置鏈接超時自動中斷的時長，單位 ( Unit ) 爲秒 ( Second ), 預設值爲 :  time_out=0.5
+22. (選), (鍵 `time_out` 固定, 值 `0.5` 自定義), 用於傳入設置鏈接超時自動中斷的時長，單位 ( Unit ) 爲秒 ( Second ), 預設值爲 :  `time_out=0.5`
 
-23. (選), (鍵 request_Auth 固定, 賬號密碼連接符 : 固定, 值 username 和 password 自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  request_Auth=username:password
+23. (選), (鍵 `request_Auth` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( `Authorization` ) 的賬號密碼字符串, 預設值爲 :  `request_Auth=username:password`
 
-24. (選), (鍵 request_Cookie 固定, 其中 Cookie 名稱 Session_ID 可以設計爲固定, Cookie 值 request_Key->username:password 可以設計爲自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的 Cookies 值字符串, 預設值爲 :  request_Cookie=Session_ID=request_Key->username:password
+24. (選), (鍵 `request_Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `request_Cookie=Session_ID=request_Key->username:password`
 
 ---
 
@@ -258,33 +258,46 @@ Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
 注意,
 
-程式代碼脚本檔 Interface.jl 裏, 函數 http_Server, http_Client 使用了第三方模組 HTTP.jl , JSON.jl 擴展包 ( packages ),
+程式代碼脚本檔 `Interface.jl` 裏, 函數 `http_Server`, `http_Client` 使用了第三方模組 `HTTP.jl` , `JSON.jl` 擴展包 ( packages ),
 
-程式代碼脚本檔 StatisticalAlgorithmServer.jl 和 Router.jl 裏, 函數 do_data, do_Request, do_Response 使用了第三方模組 JSON.jl 擴展包 ( packages ),
+程式代碼脚本檔 `StatisticalAlgorithmServer.jl` 和 `Router.jl` 裏, 函數 `do_data`, `do_Request`, `do_Response` 使用了第三方模組 `JSON.jl` 擴展包 ( packages ),
 
 所以, 需事先安裝配置成功, 加載導入之後, 才能正常運行.
 
 首先在作業系統 ( Operating System ) 控制臺命令列窗口 ( bash, cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列 ( bash ) 運行啓動指令 :
-```root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalServer/StatisticalServerJulia/```
+```
+root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalServer/StatisticalServerJulia/
+```
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
-```C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe --project=C:/StatisticalServer/StatisticalServerJulia/```
+```
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe --project=C:/StatisticalServer/StatisticalServerJulia/
+```
 
 然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
 
 程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 安裝配置説明 :
-```julia> using Pkg```
-```julia> Pkg.add("HTTP")```
+```
+julia> using Pkg
+julia> Pkg.add("HTTP")
+```
 程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 加載導入説明 :
-```julia> using HTTP```
+```
+julia> using HTTP
+```
 程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 安裝配置説明 :
-```julia> using Pkg```
-```julia> Pkg.add("JSON")```
-
+```
+julia> using Pkg
+julia> Pkg.add("JSON")
+```
 程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 加載導入説明 :
-```julia> using JSON```
+```
+julia> using JSON
+```
+
+![]()
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
 https://julialang.org/packages/
@@ -383,6 +396,8 @@ julia - 1.10.4 - packages :
 &nbsp;&nbsp;&nbsp;&nbsp;Unicode
 
 &nbsp;&nbsp;&nbsp;&nbsp;Zlib_jll - 1.2.13+0
+
+![]()
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
 https://julialang.org/
@@ -503,60 +518,64 @@ https://juliahub.com/
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
 控制臺命令列 ( bash ) 運行啓動指令 :
-```root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0```
+```
+root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
 
 微軟視窗系統 ( Window10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
-```C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0```
+```
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
 
 控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( SPACE ) ( 00100000 ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
 
-1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe
+1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`
 
-2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
+2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl` ) 的存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`
 
-   注意, 因爲「StatisticalAlgorithmServer.jl」檔中脚本代碼需要加載引入「Interface.jl」檔, 所以需要保持「StatisticalAlgorithmServer.jl」檔與「Interface.jl」檔在相同目錄下, 不然就需要手動修改「StatisticalAlgorithmServer.jl」檔中有關引用「Interface.jl」檔的加載路徑代碼, 以確保能正確引入「Interface.jl」檔.
+   注意, 因爲「`StatisticalAlgorithmServer.jl`」檔中脚本代碼需要加載引入「`Interface.jl`」檔, 所以需要保持「`StatisticalAlgorithmServer.jl`」檔與「`Interface.jl`」檔在相同目錄下, 不然就需要手動修改「`StatisticalAlgorithmServer.jl`」檔中有關引用「`Interface.jl`」檔的加載路徑代碼, 以確保能正確引入「`Interface.jl`」檔.
 
-3. (選), (鍵 configFile 固定, 值 C:/StatisticalServer/StatisticalServerJulia/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt
+3. (選), (鍵 `configFile` 固定, 值 `C:/StatisticalServer/StatisticalServerJulia/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt`
 
-4. (選), (鍵 interface_Function 固定, 值 file_Monitor 自定義, [ file_Monitor, http_Server, http_Client ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  interface_Function=file_Monitor
+4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
 
-以下是當參數 : interface_Function 取 : http_Server 值時, 可在控制臺命令列傳入的參數 :
+以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
 
-7. (選), (鍵 number_Worker_threads 固定, 值 0 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  number_Worker_threads=0
+7. (選), (鍵 `number_Worker_threads` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 `0` 值表示不開啓並發架構, 預設值爲 :  `number_Worker_threads=0`
 
-15. (選), (鍵 host 固定, 值 ::0 自定義, 例如 [ ::0, ::1, 0.0.0.0, 127.0.0.1, localhost ] 取其一), 用於傳入伺服器 ( http_Server ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6, IPv4 ) 或域名, 預設值爲 :  host=::0
+15. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( `IPv6`, `IPv4` ) 或域名, 預設值爲 :  `host=::0`
 
-16. (選), (鍵 port 固定, 值 10001 自定義), 用於傳入伺服器 ( http_Server ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( 1 ~ 65535 ), 預設值爲 :  port=10001
+16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
 
-17. (選), (鍵 key 固定, 賬號密碼連接符 : 固定, 值 username 和 password 自定義), 用於傳入自定義的訪問網站驗證 ( Authorization ) 用戶名和密碼, 預設值爲 :  key=username:password
+17. (選), (鍵 `key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `key=username:password`
 
-18. (選), (鍵 isConcurrencyHierarchy 固定, 值 Tasks 自定義, 例如 [ Tasks, Multi-Threading, Multi-Processes ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 Multi-Threading 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量：export JULIA_NUM_THREADS=4(Linux OSX) 或 set JULIA_NUM_THREADS=4(Windows) 來設置預創建多個缐程, 預設值爲 :  isConcurrencyHierarchy=Tasks
+18. (選), (鍵 `isConcurrencyHierarchy` 固定, 值 `Tasks` 自定義, 例如 [ `Tasks`, `Multi-Threading`, `Multi-Processes` ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 `Multi-Threading` 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量 : `export JULIA_NUM_THREADS=4(Linux OSX)` 或 `set JULIA_NUM_THREADS=4(Windows)` 來設置預創建多個缐程, 預設值爲 :  `isConcurrencyHierarchy=Tasks`
 
-19. (選), (鍵 webPath 固定, 值 C:/StatisticalServer/html/ 自定義), 用於傳入伺服器 ( http_Server ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  webPath=C:/StatisticalServer/html/
+19. (選), (鍵 `webPath` 固定, 值 `C:/StatisticalServer/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/StatisticalServer/html/`
 
-20. (選), (鍵 readtimeout 固定, 值 0 自定義), 用於傳入客戶端請求數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 0 值表示不做判斷是否超時, 預設值爲 :  readtimeout=0
+20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
 
-以下是當參數 : interface_Function 取 : http_Client 值時, 可在控制臺命令列傳入的參數 :
+以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
 
-15. (選), (鍵 host 固定, 值 ::1 自定義, 例如 [ ::1, 127.0.0.1, localhost ] 取其一), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6, IPv4 ) 或域名, 預設值爲 :  host=::1
+15. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( `IPv6`, `IPv4` ) 或域名, 預設值爲 :  `host=::1`
 
-16. (選), (鍵 port 固定, 值 10001 自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( 1 ~ 65535 ), 預設值爲 :  port=10001
+16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
 
-21. (選), (鍵 URL 固定, 取值自定義, 例如配置爲 http://[::1]:10001/index.html 值), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  URL=""
+21. (選), (鍵 `URL` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=""`
 
-22. (選), (鍵 proxy 固定, 取值自定義, 例如配置爲 http://[::1]:10001/index.html 值), 當用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求時, 若需要代理轉發, 用於傳入轉發代理服務器的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  proxy=""
+22. (選), (鍵 `proxy` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 當用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求時, 若需要代理轉發, 用於傳入轉發代理服務器的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `proxy=""`
 
-23. (選), (鍵 requestMethod 固定, 值 POST 自定義, 例如 [ POST, GET ] 取其一), 用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  requestMethod=POST
+23. (選), (鍵 `requestMethod` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `requestMethod=POST`
 
-20. (選), (鍵 readtimeout 固定, 值 0 自定義), 用於傳入服務端響應數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 0 值表示不做判斷是否超時, 預設值爲 :  readtimeout=0
+20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入服務端響應數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
 
-24. (選), (鍵 connecttimeout 固定, 值 0 自定義), 用於傳入客戶端請求鏈接超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 0 值表示不做判斷是否超時, 預設值爲 :  connecttimeout=0
+24. (選), (鍵 `connecttimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求鏈接超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `connecttimeout=0`
 
-25. (選), (鍵 Authorization 固定, 賬號密碼連接符 : 固定, 值 username 和 password 自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  Authorization=username:password
+25. (選), (鍵 `Authorization` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( `Authorization` ) 的賬號密碼字符串, 預設值爲 :  `Authorization=username:password`
 
-26. (選), (鍵 Cookie 固定, 其中 Cookie 名稱 Session_ID 可以設計爲固定, Cookie 值 request_Key->username:password 可以設計爲自定義), 用於傳入用戶端連接器 ( http_Client ) 向外設網卡 ( Network Interface Card ) 發送請求的 Cookies 值字符串, 預設值爲 :  Cookie=Session_ID=request_Key->username:password
+26. (選), (鍵 `Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `Cookie=Session_ID=request_Key->username:password`
 
 ---
 
@@ -569,15 +588,17 @@ Window-cmd : startServer.bat
 微軟視窗系統 ( Windows10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
-```C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServer.bat C:/StatisticalServer/config.txt```
+```
+C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServer.bat C:/StatisticalServer/config.txt
+```
 
 控制臺啓動傳參釋意 :
 
-1. (必), (固定), 微軟視窗作業系統 ( Window10 x86_64 ) 控制臺命令列窗口的二進制可執行檔 ( cmd.exe ) 啓動存儲路徑全名, 作業系統 ( Window10 x86_64 ) 固定存儲在路徑爲 :  C:/Windows/System32/cmd.exe
+1. (必), (固定), 微軟視窗作業系統 ( Window10 x86_64 ) 控制臺命令列窗口的二進制可執行檔 ( `cmd.exe` ) 啓動存儲路徑全名, 作業系統 ( Window10 x86_64 ) 固定存儲在路徑爲 :  `C:/Windows/System32/cmd.exe`
 
-2. (必), (自定義), 微軟視窗系統 ( Windows10 x86_64 ) 批處理程式代碼脚本 ( .bat ) 檔 ( startServer.bat ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/startServer.bat
+2. (必), (自定義), 微軟視窗系統 ( Windows10 x86_64 ) 批處理程式代碼脚本 ( .bat ) 檔 ( `startServer.bat` ) 的存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/startServer.bat`
 
-3. (選) (值 C:/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/StatisticalServer/config.txt
+3. (選) (值 `C:/StatisticalServer/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `C:/StatisticalServer/config.txt`
 
 ![]()
 
@@ -590,23 +611,25 @@ Android-Termux-Ubuntu-bash : startServer.sh
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
 控制臺命令列 ( bash ) 運行啓動指令 :
-```root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks```
+```
+root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
 
-控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( , ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
+控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
 
-1. (必), (固定), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列窗口的二進制可執行檔 ( bash ) 啓動存儲路徑全名, 作業系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 固定存儲在路徑爲 :  /bin/bash
+1. (必), (固定), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列窗口的二進制可執行檔 ( `bash` ) 啓動存儲路徑全名, 作業系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 固定存儲在路徑爲 :  `/bin/bash`
 
-2. (必), (自定義), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 批處理程式代碼脚本 ( .sh ) 檔 ( startServer.sh ) 的存儲路徑全名, 預設值爲 :  C:/StatisticalServer/startServer.sh
+2. (必), (自定義), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 批處理程式代碼脚本 ( .sh ) 檔 ( `startServer.sh` ) 的存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/startServer.sh`
 
-3. (選), (鍵 configFile 固定, 值 /home/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  configFile=/home/StatisticalServer/config.txt
+3. (選), (鍵 `configFile` 固定, 值 `/home/StatisticalServer/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `configFile=/home/StatisticalServer/config.txt`
 
-4. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3 ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  executableFile=/bin/julia
+4. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
 
-5. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/
+5. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/`
 
-6. (選), (鍵 scriptFile 固定, 值 /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl 自定義, 例如 [ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl, /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的存儲路徑全名, 預設值爲 :  scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
+6. (選), (鍵 `scriptFile` 固定, 值 `/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl` 自定義, 例如 [ `/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`, `/home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`
 
-7. (選), (鍵 configInstructions 固定, 取值自定義, 且可爲空, 即取 configInstructions= 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 批處理程式脚本 startServer.sh 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行環境, 預設值爲 :  configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+7. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
 
 ---
 
@@ -627,13 +650,19 @@ Windows10 x86_64 Compiler :
 Minimalist GNU on Windows ( MinGW-w64 ) mingw64-8.1.0-release-posix-seh-rt_v6-rev0
 
 控制臺命令列 ( cmd ) 運行編譯指令 :
-```C:\StatisticalServer> C:\MinGW64\bin\gcc.exe C:/StatisticalServer/c/c2exe.c -o C:/StatisticalServer/StatisticalServer.exe```
+```
+C:\StatisticalServer> C:\MinGW64\bin\gcc.exe C:/StatisticalServer/c/c2exe.c -o C:/StatisticalServer/StatisticalServer.exe
+```
 
 控制臺命令列 ( cmd ) 運行顯示中文字符指令 :
-```C:\StatisticalServer> chcp 65001```
+```
+C:\StatisticalServer> chcp 65001
+```
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
-```C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks```
+```
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
 
 ![]()
 
@@ -643,29 +672,33 @@ Minimalist GNU on Windows ( MinGW-w64 ) mingw64-8.1.0-release-posix-seh-rt_v6-re
 
 Android-11 Termux-0.118 Ubuntu-22.04 Arm64-aarch64 Compiler :
 
-gcc v9.3.0, g++ v9.3.0
+gcc v9.3.0 , g++ v9.3.0
 
 控制臺命令列 ( bash ) 運行編譯指令 :
-```root@localhost:~# /bin/gcc /home/StatisticalServer/c/c2exe.c -o /home/StatisticalServer/StatisticalServer.exe```
+```
+root@localhost:~# /bin/gcc /home/StatisticalServer/c/c2exe.c -o /home/StatisticalServer/StatisticalServer.exe
+```
 
 控制臺命令列 ( bash ) 運行啓動指令 :
-```root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks```
+```
+root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
 
 ![]()
 
-控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( , ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( = ) 連接, 即類比 Key=Value 的形式 :
+控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
 
-1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( c2exe.c ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  C:/StatisticalServer/StatisticalServer.exe
+1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( `c2exe.c` ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  `C:/StatisticalServer/StatisticalServer.exe`
 
-2. (選) (值 C:/StatisticalServer/config.txt 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( # ) 注釋掉, 使用井號字符 ( # ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( # ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  C:/StatisticalServer/config.txt
+2. (選) (值 `C:/StatisticalServer/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `C:/StatisticalServer/config.txt`
 
-3. (選), (鍵 executableFile 固定, 值 /bin/julia 自定義, 例如 [ /bin/julia, /bin/python3 ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  executableFile=/bin/julia
+3. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
 
-4. (選), (鍵 interpreterFile 固定, 值 -p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ 自定義, 且可爲空, 即取 interpreterFile= 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 代碼文檔 c2exe.c 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/
+4. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/`
 
-5. (選), (鍵 scriptFile 固定, 值 /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl 自定義, 例如 [ /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl, /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的存儲路徑全名, 預設值爲 :  scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
+5. (選), (鍵 `scriptFile` 固定, 值 `/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl` 自定義, 例如 [ `/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`, `/home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`
 
-6. (選), (鍵 configInstructions 固定, 取值自定義, 且可爲空, 即取 configInstructions= 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( , ) 字符連接, 代碼文檔 c2exe.c 已設計爲可自動將逗號 ( , ) 字符替換爲空格字符 ( SPACE ) ( 00100000 ), 然後再傳入代碼脚本 ( Script ) 檔 ( StatisticalAlgorithmServer.jl, StatisticalAlgorithmServer.py ) 的運行環境, 預設值爲 :  configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+6. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
 
 ![]()
 
@@ -696,43 +729,53 @@ https://sourceforge.net/projects/mingw-w64/
 一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」打開交互介面.
 
 打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-```http://username:password@[::1]:10001/index.html?Key=username:password```
+```
+http://username:password@[::1]:10001/index.html?Key=username:password
+```
 
 打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-```http://username:password@[::1]:10001/administrator.html?Key=username:password```
+```
+http://username:password@[::1]:10001/administrator.html?Key=username:password
+```
 
-交互頁面「index.html」可視化數據圖表，使用第三方擴展包，百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」實現.
+交互頁面「`index.html`」可視化數據圖表，使用第三方擴展包，百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」實現.
 
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「index.html」「SelectStatisticalAlgorithms.html」「InputHTML.html」「OutputHTML.html」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「index.html」内統計方法的連接 ( Browser Client Request ) 選項.
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
-二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」作爲用戶端 ( Client ) 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算.
+二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」作爲用戶端 ( Client ) 連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 計算.
 
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」打開之後，菜單欄 ( Excel menu bar ) 之 :
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」打開之後，菜單欄 ( Excel menu bar ) 之 :
 
-1. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`人機交互介面 ( operation panel )`」，爲連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算的操作面板.
+1. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`人機交互介面 ( operation panel )`」，爲連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 計算的操作面板.
 
-2. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`統計運算 ( Statistics server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( Client.xlsm ) 内，通過創建子進程 ( subprocess ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( cmd ) 應用，啓動統計運算伺服器「StatisticalServer」的運行指令.
+2. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`統計運算 ( Statistics server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( `Client.xlsm` ) 内，通過創建子進程 ( Sub Process ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( `cmd.exe` ) 應用，啓動統計運算伺服器「`StatisticalServer`」的運行指令.
 
-其中，項目空間内的代碼脚本檔「StatisticsAlgorithmModule.bas」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+其中，項目空間内的代碼脚本檔「`StatisticsAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，借用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON : JsonConverter.bas」實現.
 
-三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「StatisticalServer」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
+三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「`StatisticalServer`」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
 
-使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
+使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
 
-1. 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
-```http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0.0&algorithmKei=2.0&algorithmDi=1.0&algorithmEith=1.0```
+1. 連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0.0&algorithmKei=2.0&algorithmDi=1.0&algorithmEith=1.0
+```
 
-2. 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
-```http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit```
+3. 連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit
+```
 
-3. 連接統計運算伺服器「StatisticalServer」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
-```http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit```
+5. 連接統計運算伺服器「`StatisticalServer`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit
+```
 
 用戶端 ( Client - Request ) 發送 POST 請求的數據爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
-```Request - POST = 
-{
+```
+Request - POST = {
     "trainXdata" : [
         0.0,
         1.0,
@@ -897,11 +940,12 @@ https://sourceforge.net/projects/mingw-w64/
         [950.0, 948.0, 952.0],
         [1050.0, 1048.0, 1052.0]
     ]
-}```
+}
+```
 
 伺服器 ( Server - Respond ) 響應 POST 請求的數據格式爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
-```Respond - body = 
-{
+```
+Respond - body = {
     "Coefficient" : [
         100.007982422761,
         42148.4577551448,
@@ -1073,7 +1117,8 @@ https://sourceforge.net/projects/mingw-w64/
             [0.00004903674755]
         ]
     }
-}```
+}
+```
 
 ![]()
 
