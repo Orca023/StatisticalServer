@@ -1179,26 +1179,79 @@ https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
 
 ---
 
-開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 開發環境的壓縮包 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g) 下載頁: 
+開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g) 下載頁: 
 https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
 
 提取碼：cy8g
 
 開箱即用 ( out of the box ) ( portable application ) 檔 :
 
-1. 壓縮檔 : Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z
+1. 壓縮檔 : `Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`
 
-2. 壓縮檔 : Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z
+壓縮檔「`Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.9.3-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/Julia/` 内，最終完整路徑爲「`StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`」
 
-3. 壓縮檔 : StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z
+2. 壓縮檔 : `Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`
 
-4. 壓縮檔 : StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z
+壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/Python/` 内，最終完整路徑爲「`StatisticalServer/Python/Python311/python.exe`」
 
-5. 壓縮檔 : StatisticalServer-Window10-AMD_FX8800P_x86_64.7z
+3. 壓縮檔 : `StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z`
 
-6. 壓縮檔 : google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
+壓縮檔「`StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'StatisticalServerJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此統計運算伺服器 'StatisticalServerJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/StatisticalServerJulia/` 内，再因應協調配置壓縮檔「`Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「`StatisticalServerJulia`」項目 : 
+```
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
 
-7. 二進位可執行檔 : StatisticalServer-Window10-AMD_FX8800P_x86_64.exe
+4. 壓縮檔 : `StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
 
-8. 二進位可執行檔 : StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe
+壓縮檔「`StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'StatisticalServerPython' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'StatisticalServerPython' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/StatisticalServerPython/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServerPython`」項目 : 
+```
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServerPython/Scripts/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+或者 : 
+```
+C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
 
+5. 壓縮檔 : `StatisticalServer-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`StatisticalServer-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'StatisticalServer' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'StatisticalServer' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至根目錄 ( Root Directory ) : `C:` 内，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
+程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
+```
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
+```
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServerPython/Scripts/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+或者 :
+```
+C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+
+6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz`
+
+壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'StatisticalServer'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
+```
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+最終保存爲檔案夾 ( folder ) : `/home/StatisticalServer/` 形式，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
+程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
+```
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
+```
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServerPython/Scripts/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+或者 :
+```
+C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+
+7. 二進位可執行檔 : `StatisticalServer-Window10-AMD_FX8800P_x86_64.exe`
+
+8. 二進位可執行檔 : `StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
+
+Interpreter: julia-1.10.4-linux-aarch64.tar.gz
+
+Interpreter: Python-3.12.4-tar.xz
