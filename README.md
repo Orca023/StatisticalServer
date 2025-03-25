@@ -1228,11 +1228,11 @@ C:\StatisticalServer> C:/StatisticalServer/StatisticalServerPython/Scripts/pytho
 ```
 C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=C:/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
 ```
-使用批處理脚本「startServer.bat」啓動，使用如下指令 : 
+使用批處理脚本「`startServer.bat`」啓動，使用如下指令 : 
 ```
 C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServer.bat C:/StatisticalServer/config.txt
 ```
-使用二進位可執行檔「StatisticalServer.exe」啓動，使用如下指令 : 
+使用二進位可執行檔「`StatisticalServer.exe`」啓動，使用如下指令 : 
 ```
 C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
@@ -1243,7 +1243,50 @@ C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/S
 ```
 root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz
 ```
-最終保存爲檔案夾 ( folder ) : `/home/StatisticalServer/` 形式，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
+最終保存爲檔案夾 ( folder ) : `/home/StatisticalServer/` 形式.
+
+然後，再使用如下指令修改批處理 ( Bash ) 脚本「`startServer.sh`」和二進位可執行檔「`StatisticalServer.exe`」的權限爲所有用戶可執行 :
+```
+root@localhost:~# chmod 777 /home/StatisticalServer/startServer.sh
+```
+```
+root@localhost:~# chmod 777 /home/StatisticalServer/StatisticalServer.exe
+```
+使用如下指令修改參數配置文檔「`/home/StatisticalServer/config.txt`」「`/home/StatisticalServer/StatisticalServerJulia/config.txt`」「`/home/StatisticalServer/StatisticalServerPython/config.txt`」和代碼脚本檔 ( Script file ) 「`/home/StatisticalServer/StatisticalServerJulia/Interface.jl`」「`/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`」「`/home/StatisticalServer/StatisticalServerJulia/Router.jl`」「`/home/StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl`」「`/home/StatisticalServer/StatisticalServerPython/Interface.py`」「`/home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py`」「`/home/StatisticalServer/StatisticalServerPython/Router.py`」「`/home/StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py`」的權限爲所有用戶可讀可寫 :
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/Interface.jl
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/Router.jl
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/Interface.py
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/Router.py
+```
+```
+root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py
+```
+然後，即可使用如下指令啓動運行統計運算伺服器「'StatisticalServer'」項目 : 
 
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
@@ -1253,11 +1296,11 @@ root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/Statist
 ```
 root@localhost:~# /usr/bin/python3 /home/StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py configFile=/home/StatisticalServer/StatisticalServerPython/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
 ```
-使用 Shell 語言脚本「startServer.sh」啓動，使用如下指令 : 
+使用 Shell 語言脚本「`startServer.sh`」啓動，使用如下指令 : 
 ```
 root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
-使用二進位可執行檔「StatisticalServer.exe」啓動，使用如下指令 : 
+使用二進位可執行檔「`StatisticalServer.exe`」啓動，使用如下指令 : 
 ```
 root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
