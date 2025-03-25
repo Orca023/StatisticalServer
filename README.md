@@ -1313,7 +1313,7 @@ C:\StatisticalServer> rename C:/StatisticalServer/StatisticalServer-Window10-AMD
 ```
 8. 二進位可執行檔 : `StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
 
-二進位可執行檔「`StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'StatisticalServer'」項目内 C 語言源代碼檔「'StatisticalServer/c/c2exe.c'」使用 Ubuntu - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/StatisticalServer/` 内，使用如下指令將其重命名 :
+二進位可執行檔「`StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'StatisticalServer'」項目内 C 語言源代碼檔「'StatisticalServer/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/StatisticalServer/` 内，使用如下指令將其重命名 :
 ```
 root@localhost:~# /home/StatisticalServer/StatisticalServer_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/StatisticalServer/StatisticalServer.exe
 ```
