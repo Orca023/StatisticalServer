@@ -30,15 +30,15 @@
 
 ---
 
-一. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interface.jl` , `StatisticalServer/StatisticalServerPython/Interface.py`
+一. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/src/Interface.jl` , `StatisticalServer/StatisticalServerPython/src/Interface.py`
 
 代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
 
-二. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interpolation_Fitting.jl` , `StatisticalServer/StatisticalServerPython/Interpolation_Fitting.py`
+二. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/src/Interpolation_Fitting.jl` , `StatisticalServer/StatisticalServerPython/src/Interpolation_Fitting.py`
 
 代碼脚本 ( Script ) 檔 : `Interpolation_Fitting.jl` 和 `Interpolation_Fitting.py` 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
 
-三. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Router.jl` , `StatisticalServer/StatisticalServerPython/Router.py`
+三. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/src/Router.jl` , `StatisticalServer/StatisticalServerPython/src/Router.py`
 
 代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 引用 ( Import ) 檔 `Interpolation_Fitting.jl` 或 `Interpolation_Fitting.py` 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 `Interface` 的伺服器 ( Server ) 函數. 
 
@@ -50,7 +50,7 @@
 
 可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「`StatisticalServer`」所能提供的計算方法 ( Server Respond ) 的選項.
 
-四. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl` , `StatisticalServer/StatisticalServerPython/StatisticalAlgorithmServer.py`
+四. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl` , `StatisticalServer/StatisticalServerPython/src/StatisticalAlgorithmServer.py`
 
 代碼脚本 ( Script ) 檔 : `StatisticalAlgorithmServer.jl` 或 `StatisticalAlgorithmServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
 
