@@ -301,17 +301,9 @@ julia> using JSON
 
 ![]()
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
-https://julialang.org/packages/
+Interpreter :
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫頁](https://github.com/JuliaRegistries/General): 
-https://github.com/JuliaRegistries/General.git
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 HTTP.jl 的官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
-https://github.com/JuliaWeb/HTTP.jl.git
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 JSON.jl 的官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
-https://github.com/JuliaIO/JSON.jl.git
+Julia - 1.10.4
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
 https://julialang.org/
@@ -334,6 +326,12 @@ https://github.com/JuliaRegistries/General.git
 ![]()
 
 程式設計 Julia 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+
+[Julia - HTTP 官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
+https://github.com/JuliaWeb/HTTP.jl.git
+
+[Julia - JSON 官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
+https://github.com/JuliaIO/JSON.jl.git
 
 [Julia - LsqFit 官方手冊](https://julianlsolvers.github.io/LsqFit.jl/latest/): 
 https://julianlsolvers.github.io/LsqFit.jl/latest/
