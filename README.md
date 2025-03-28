@@ -149,6 +149,27 @@ https://pandas.pydata.org/docs/
 [Python - pandas 官方 GitHub 網站倉庫頁](https://github.com/pandas-dev/pandas): 
 https://github.com/pandas-dev/pandas.git
 
+[Python - openpyxl 官方網站](https://www.python-excel.org/): 
+https://www.python-excel.org/
+
+[Python - openpyxl 官方手冊](https://openpyxl.readthedocs.io/en/stable/): 
+https://openpyxl.readthedocs.io/en/stable/
+
+[Python - openpyxl 官方 PyPi 組織倉庫頁](https://pypi.org/project/openpyxl/): 
+https://pypi.org/project/openpyxl/
+
+[Python - openpyxl 發佈頁](https://foss.heptapod.net/openpyxl/openpyxl): 
+https://foss.heptapod.net/openpyxl/openpyxl
+
+[Python - xlrd 官方手冊](https://xlrd.readthedocs.io/en/latest/?badge=latest): 
+https://xlrd.readthedocs.io/en/latest/?badge=latest
+
+[Python - xlrd 官方 GitHub 網站倉庫頁](https://github.com/python-excel/xlrd): 
+https://github.com/python-excel/xlrd.git
+
+[Python - pillow 官方 GitHub 網站倉庫頁](https://github.com/python-pillow/Pillow): 
+https://github.com/python-pillow/Pillow.git
+
 [Python - matplotlib 官方網站](https://matplotlib.org/): 
 https://matplotlib.org/
 
