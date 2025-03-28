@@ -167,8 +167,20 @@ https://xlrd.readthedocs.io/en/latest/?badge=latest
 [Python - xlrd 官方 GitHub 網站倉庫頁](https://github.com/python-excel/xlrd): 
 https://github.com/python-excel/xlrd.git
 
+[Python - pillow 官方手冊](https://pillow.readthedocs.io/en/stable/?badge=latest): 
+https://pillow.readthedocs.io/en/stable/?badge=latest
+
+[Python - pillow 官方 PyPi 組織倉庫頁](https://pypi.org/project/pillow/): 
+https://pypi.org/project/pillow/
+
 [Python - pillow 官方 GitHub 網站倉庫頁](https://github.com/python-pillow/Pillow): 
 https://github.com/python-pillow/Pillow.git
+
+[Python - pyarrow 官方手冊](https://arrow.apache.org/docs/3.0/_modules/pyarrow.html): 
+https://arrow.apache.org/docs/3.0/_modules/pyarrow.html
+
+[Python - pyarrow 官方 PyPi 組織倉庫頁](https://pypi.org/project/pyarrow/): 
+https://pypi.org/project/pyarrow/
 
 [Python - matplotlib 官方網站](https://matplotlib.org/): 
 https://matplotlib.org/
