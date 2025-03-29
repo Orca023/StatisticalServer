@@ -72,9 +72,9 @@
 代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/administrator.html`
 
-逗號 ( , ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+逗號 ( Comma ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
 
-逗號 ( , ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
+逗號 ( Comma ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
 
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
@@ -569,7 +569,7 @@ Android-Termux-Ubuntu-bash : startServer.sh
 root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/home/StatisticalServer/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/ scriptFile=/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
 
-控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
+控制臺啓動傳參釋意, 各參數之間以一個逗號 ( Comma ) 字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
 
 1. (必), (固定), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列窗口的二進制可執行檔 ( `bash` ) 啓動存儲路徑全名, 作業系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 固定存儲在路徑爲 :  `/bin/bash`
 
@@ -579,11 +579,11 @@ root@localhost:~# /bin/bash /home/StatisticalServer/startServer.sh configFile=/h
 
 4. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
 
-5. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/`
+5. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/`
 
 6. (選), (鍵 `scriptFile` 固定, 值 `/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl` 自定義, 例如 [ `/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl`, `/home/StatisticalServer/StatisticalServerPython/src/StatisticalAlgorithmServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl`
 
-7. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
+7. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
 
 ---
 
@@ -640,7 +640,7 @@ root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home
 
 ![]()
 
-控制臺啓動傳參釋意, 各參數之間以一個逗號字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
+控制臺啓動傳參釋意, 各參數之間以一個逗號 ( Comma ) 字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
 
 1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( `c2exe.c` ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  `C:/StatisticalServer/StatisticalServer.exe`
 
@@ -648,11 +648,11 @@ root@localhost:~# /home/StatisticalServer/StatisticalServer.exe configFile=/home
 
 3. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
 
-4. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/`
+4. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/StatisticalServer/StatisticalServerJulia/`
 
 5. (選), (鍵 `scriptFile` 固定, 值 `/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl` 自定義, 例如 [ `/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl`, `/home/StatisticalServer/StatisticalServerPython/src/StatisticalAlgorithmServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl`
 
-6. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( `,` ) 字符連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( `,` ) 字符替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
+6. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl`, `StatisticalAlgorithmServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=/home/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
 
 ![]()
 
