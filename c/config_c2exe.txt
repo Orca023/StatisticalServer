@@ -1,0 +1,55 @@
+## configFile=C:/Criss/config.txt
+
+# executableFile=C:/Criss/Julia/Julia-1.9.3/bin/julia.exe
+# interpreterFile=-p,4,--project=C:/Criss/jl/
+# scriptFile=C:/Criss/jl/application.jl
+# configInstructions=configFile=C:/Criss/jl/config.txt,interface_Function=http_Server,webPath=C:/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=C:/Criss/Intermediary/,monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt,output_dir=C:/Criss/Intermediary/,output_file=C:/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=C:/Criss/temp/
+
+# executableFile=C:/Criss/py/Scripts/python.exe
+# executableFile=C:/Criss/Python/Python311/python.exe
+# interpreterFile=
+# scriptFile=C:/Criss/py/application.py
+# configInstructions=configFile=C:/Criss/py/config.txt,interface_Function=http_Server,webPath=C:/Criss/html/,host=::0,port=10001,Key=username:password,Is_multi_thread=False,number_Worker_process=0,is_Monitor_Concurrent=0,is_monitor=False,time_sleep=0.02,monitor_dir=C:/Criss/Intermediary/,monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt,output_dir=C:/Criss/Intermediary/,output_file=C:/Criss/Intermediary/intermediary_write_Python.txt,temp_cache_IO_data_dir=C:/Criss/temp/
+
+# executableFile=C:/Criss/Nodejs/node.exe
+# interpreterFile=
+# scriptFile=C:/Criss/js/application.js
+# configInstructions=configFile=C:/Criss/js/config.txt,interface_Function=http_Server,webPath=C:/Criss/html/,host=::0,port=10001,Key=username:password,number_cluster_Workers=0,is_monitor=false,Sys_sleep=0.2,monitor_dir=C:/Criss/Intermediary/,monitor_file=C:/Criss/Intermediary/intermediary_write_C.txt,output_dir=C:/Criss/Intermediary/,output_file=C:/Criss/Intermediary/intermediary_write_Nodejs.txt,temp_cache_IO_data_dir=C:/Criss/temp/
+
+
+## configFile=/data/data/com.termux/files/home/Criss/config.txt
+
+# executableFile=/data/data/com.termux/files/usr/bin/julia
+# interpreterFile=-p,4,--project=/data/data/com.termux/files/home/Criss/jl/
+# scriptFile=/data/data/com.termux/files/home/Criss/jl/application.jl
+# configInstructions=configFile=/data/data/com.termux/files/home/Criss/jl/config.txt,interface_Function=http_Server,webPath=/data/data/com.termux/files/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/data/data/com.termux/files/home/Criss/Intermediary/,monitor_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/data/data/com.termux/files/home/Criss/Intermediary/,output_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/data/data/com.termux/files/home/Criss/temp/
+
+# executableFile=/data/data/com.termux/files/usr/bin/python
+# executableFile=/data/data/com.termux/files/home/Criss/py/Scripts/python
+# interpreterFile=
+# scriptFile=/data/data/com.termux/files/home/Criss/py/application.py
+# configInstructions=configFile=/data/data/com.termux/files/home/Criss/py/config.txt,interface_Function=http_Server,webPath=/data/data/com.termux/files/home/Criss/html/,host=::0,port=10001,Key=username:password,Is_multi_thread=False,number_Worker_process=0,is_Monitor_Concurrent=0,is_monitor=False,time_sleep=0.02,monitor_dir=/data/data/com.termux/files/home/Criss/Intermediary/,monitor_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/data/data/com.termux/files/home/Criss/Intermediary/,output_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_Python.txt,temp_cache_IO_data_dir=/data/data/com.termux/files/home/Criss/temp/
+
+# executableFile=/data/data/com.termux/files/usr/bin/node
+# interpreterFile=
+# scriptFile=/data/data/com.termux/files/home/Criss/js/application.js
+# configInstructions=configFile=/data/data/com.termux/files/home/Criss/js/config.txt,interface_Function=http_Server,webPath=/data/data/com.termux/files/home/Criss/html/,host=::0,port=10001,Key=username:password,number_cluster_Workers=0,is_monitor=false,Sys_sleep=0.2,monitor_dir=/data/data/com.termux/files/home/Criss/Intermediary/,monitor_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/data/data/com.termux/files/home/Criss/Intermediary/,output_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_Nodejs.txt,temp_cache_IO_data_dir=/data/data/com.termux/files/home/Criss/temp/
+
+
+## configFile=/home/Criss/config.txt
+
+# executableFile=/usr/julia/julia-1.10.3/bin/julia
+# interpreterFile=-p,4,--project=/home/Criss/jl/
+# scriptFile=/home/Criss/jl/application.jl
+# configInstructions=configFile=/home/Criss/jl/config.txt,interface_Function=http_Server,webPath=/home/Criss/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,is_monitor=false,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Julia.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+
+# executableFile=/usr/bin/python3
+# executableFile=/home/Criss/py/Scripts/python
+# interpreterFile=
+# scriptFile=/home/Criss/py/application.py
+# configInstructions=configFile=/home/Criss/py/config.txt,interface_Function=http_Server,webPath=/home/Criss/html/,host=::0,port=10001,Key=username:password,Is_multi_thread=False,number_Worker_process=0,is_Monitor_Concurrent=0,is_monitor=False,time_sleep=0.02,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Python.txt,temp_cache_IO_data_dir=/home/Criss/temp/
+
+# executableFile=/bin/node
+# interpreterFile=
+# scriptFile=/home/Criss/js/application.js
+# configInstructions=configFile=/home/Criss/js/config.txt,interface_Function=http_Server,webPath=/home/Criss/html/,host=::0,port=10001,Key=username:password,number_cluster_Workers=0,is_monitor=false,Sys_sleep=0.2,monitor_dir=/home/Criss/Intermediary/,monitor_file=/home/Criss/Intermediary/intermediary_write_C.txt,output_dir=/home/Criss/Intermediary/,output_file=/home/Criss/Intermediary/intermediary_write_Nodejs.txt,temp_cache_IO_data_dir=/home/Criss/temp/

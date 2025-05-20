@@ -1,0 +1,85 @@
+## configFile=C:/Criss/c/config.txt
+
+# interface_Function=tcp_Server
+# is_monitor=true
+# monitor_dir=C:/Criss/Intermediary/
+# monitor_file=C:/Criss/Intermediary/intermediary_write_Nodejs.txt
+# output_dir=C:/Criss/Intermediary/
+# output_file=C:/Criss/Intermediary/intermediary_write_C.txt
+# temp_cache_IO_data_dir=C:/Criss/temp/
+# key=username:password
+# IPversion=IPv6
+# serverHOST=::0
+# serverPORT=10001
+# webPath=C:/Criss/html/
+# time_sleep=1.0
+# time_out=1.0
+# clientHOST=::1
+# clientPORT=10001
+# requestURL=http://username:password@localhost:10001/
+# requestConnection=keep-alive
+# requestPath=/
+# requestFrom=user@email.com
+# requestReferer=http://username:password@localhost:10001/
+# requestAuthorization=Basic username:password -> Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# requestCookie=Session_ID=request_Key->username:password -> Session_ID=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# session={"request_Key->username:password":"username:password"}
+# requestData={"Client_say":"language C Socket client connection 在這裏輸入向服務端發送的待處理的數據.","time":"2021-04-24 14:05:33.286"}
+
+
+## configFile=/data/data/com.termux/files/home/Criss/c/config.txt
+
+# interface_Function=tcp_Server
+# is_monitor=false
+# monitor_dir=/data/data/com.termux/files/home/Criss/Intermediary/
+# monitor_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_Nodejs.txt
+# output_dir=/data/data/com.termux/files/home/Criss/Intermediary/
+# output_file=/data/data/com.termux/files/home/Criss/Intermediary/intermediary_write_C.txt
+# temp_cache_IO_data_dir=/data/data/com.termux/files/home/Criss/temp/
+# key=username:password
+# IPversion=IPv6
+# serverHOST=::0
+# serverPORT=10001
+# webPath=/data/data/com.termux/files/home/Criss/html/
+# time_sleep=1.0
+# time_out=1.0
+# clientHOST=::1
+# clientPORT=10001
+# requestURL=http://username:password@localhost:10001/
+# requestConnection=keep-alive
+# requestPath=/
+# requestFrom=user@email.com
+# requestReferer=http://username:password@localhost:10001/
+# requestAuthorization=Basic username:password -> Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# requestCookie=Session_ID=request_Key->username:password -> Session_ID=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# session={"request_Key->username:password":"username:password"}
+# requestData={"Client_say":"language C Socket client connection 在這裏輸入向服務端發送的待處理的數據.","time":"2021-04-24 14:05:33.286"}
+
+
+## configFile=/home/Criss/c/config.txt
+
+# interface_Function=tcp_Server
+# is_monitor=false
+# monitor_dir=/home/Criss/Intermediary/
+# monitor_file=/home/Criss/Intermediary/intermediary_write_Nodejs.txt
+# output_dir=/home/Criss/Intermediary/
+# output_file=/home/Criss/Intermediary/intermediary_write_C.txt
+# temp_cache_IO_data_dir=/home/Criss/temp/
+# key=username:password
+# IPversion=IPv6
+# serverHOST=::0
+# serverPORT=10001
+# webPath=/home/Criss/html/
+# time_sleep=1.0
+# time_out=1.0
+# clientHOST=::1
+# clientPORT=10001
+# requestURL=http://username:password@localhost:10001/
+# requestConnection=keep-alive
+# requestPath=/
+# requestFrom=user@email.com
+# requestReferer=http://username:password@localhost:10001/
+# requestAuthorization=Basic username:password -> Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# requestCookie=Session_ID=request_Key->username:password -> Session_ID=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# session={"request_Key->username:password":"username:password"}
+# requestData={"Client_say":"language C Socket client connection 在這裏輸入向服務端發送的待處理的數據.","time":"2021-04-24 14:05:33.286"}
