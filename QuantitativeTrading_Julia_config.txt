@@ -1,0 +1,41 @@
+# configFile=/data/data/com.termux/files/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+
+# input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day-source/
+# # input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day-source/SZ#002611.csv
+# # input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/SZ#002611.xlsx
+# is_save_JLD=true
+# output_jld_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/steppingData.jld
+# is_save_csv=false
+# output_csv_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day/
+# is_save_xlsx=false
+# output_xlsx_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day/
+# Cleaned_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/steppingData.jld
+# K_Line_source={\"002611\":{\"date_transaction\":[\"2019-01-02\",\"2019-01-03\",\"2019-01-04\"],\"turnover_volume\":[7385675,33846475,27957054],\"opening_price\":[3.75,3.76,3.84],\"close_price\":[3.76,3.94,3.98],\"low_price\":[3.73,3.72,3.80],\"high_price\":[3.80,4.14,4.00]}}
+
+# configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+
+# input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/
+# # input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/SZ#002611.csv
+# # input_K_Line=/home/QuantitativeTrading/Data/SZ#002611.xlsx
+# is_save_JLD=true
+# output_jld_K_Line=/home/QuantitativeTrading/Data/steppingData.jld
+# is_save_csv=false
+# output_csv_K_Line=/home/QuantitativeTrading/Data/K-Day/
+# is_save_xlsx=false
+# output_xlsx_K_Line=/home/QuantitativeTrading/Data/K-Day/
+# Cleaned_K_Line=/home/QuantitativeTrading/Data/steppingData.jld
+# K_Line_source={\"002611\":{\"date_transaction\":[\"2019-01-02\",\"2019-01-03\",\"2019-01-04\"],\"turnover_volume\":[7385675,33846475,27957054],\"opening_price\":[3.75,3.76,3.84],\"close_price\":[3.76,3.94,3.98],\"low_price\":[3.73,3.72,3.80],\"high_price\":[3.80,4.14,4.00]}}
+
+# configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+
+input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/
+# input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/SZ#002611.csv
+# input_K_Line=C:/QuantitativeTrading/Data/SZ#002611.xlsx
+is_save_JLD=false
+output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
+is_save_csv=false
+output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/
+is_save_xlsx=false
+output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/
+Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
+K_Line_source={\"002611\":{\"date_transaction\":[\"2019-01-02\",\"2019-01-03\",\"2019-01-04\"],\"turnover_volume\":[7385675,33846475,27957054],\"opening_price\":[3.75,3.76,3.84],\"close_price\":[3.76,3.94,3.98],\"low_price\":[3.73,3.72,3.80],\"high_price\":[3.80,4.14,4.00]}}
