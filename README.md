@@ -56,7 +56,7 @@
 
 五. 檔案夾 ( folder ) : `StatisticalServer/Julia/` , `StatisticalServer/Python/`
 
-檔案夾 ( folder )「`StatisticalServer/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`」路徑.
+檔案夾 ( folder )「`StatisticalServer/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe`」路徑.
 
 檔案夾 ( folder )「`StatisticalServer/Python/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Python/Python311/python.exe`」路徑.
 
@@ -283,7 +283,7 @@ Julia Explain : Interface.jl , StatisticalAlgorithmServer.jl , Router.jl , Inter
 
 Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
 
-Interpreter: julia-1.9.3-win64.exe
+Interpreter: julia-1.10.10-win64.exe
 
 Interpreter: julia-1.10.4-linux-x86_64.tar.gz
 
@@ -308,7 +308,7 @@ root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalS
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
 ```
-C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe --project=C:/StatisticalServer/StatisticalServerJulia/
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe --project=C:/StatisticalServer/StatisticalServerJulia/
 ```
 
 然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
@@ -480,12 +480,12 @@ root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/Statist
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 ```
-C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 ```
 
 控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( `SPACE` ) ( `00100000` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
 
-1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`
+1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe`
 
 2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl` ) 的存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl`
 
@@ -615,7 +615,7 @@ C:\StatisticalServer> chcp 65001
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 ```
-C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
 
 ![]()
@@ -1138,19 +1138,19 @@ https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
 
 開箱即用 ( out of the box ) ( portable application ) 檔 :
 
-1. 壓縮檔 : `Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`
+1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
 
-壓縮檔「`Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.9.3-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/Julia/` 内，最終完整路徑應爲「`StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`」
+壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.10.10-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/Julia/` 内，最終完整路徑應爲「`StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe`」
 
 2. 壓縮檔 : `Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`
 
 壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/Python/` 内，最終完整路徑應爲「`StatisticalServer/Python/Python311/python.exe`」
 
-3. 壓縮檔 : `StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z`
+3. 壓縮檔 : `StatisticalServerJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
 
-壓縮檔「`StatisticalServerJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'StatisticalServerJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此統計運算伺服器 'StatisticalServerJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/StatisticalServerJulia/` 内，再因應協調配置壓縮檔「`Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「`StatisticalServerJulia`」項目 : 
+壓縮檔「`StatisticalServerJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'StatisticalServerJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此統計運算伺服器 'StatisticalServerJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `StatisticalServer/StatisticalServerJulia/` 内，再因應協調配置壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「`StatisticalServerJulia`」項目 : 
 ```
-C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 ```
 
 4. 壓縮檔 : `StatisticalServerPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
@@ -1170,7 +1170,7 @@ C:\StatisticalServer> C:/StatisticalServer/Python/Python311/python.exe C:/Statis
 
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
-C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/StatisticalServer/StatisticalServerJulia/ C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=C:/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 ```
 程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
 ```
@@ -1186,7 +1186,7 @@ C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/StatisticalServer/startServ
 ```
 使用二進位可執行檔「`StatisticalServer.exe`」啓動，使用如下指令 : 
 ```
-C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+C:\StatisticalServer> C:/StatisticalServer/StatisticalServer.exe configFile=C:/StatisticalServer/config.txt executableFile=C:/StatisticalServer/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/StatisticalServer/StatisticalServerJulia/ scriptFile=C:/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configInstructions=configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt,interface_Function=http_Server,webPath=C:/StatisticalServer/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
 
 6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_StatisticalServer.tar.gz`
