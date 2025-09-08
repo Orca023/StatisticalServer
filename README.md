@@ -285,11 +285,11 @@ Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
 
 Interpreter: julia-1.10.10-win64.exe
 
-Interpreter: julia-1.10.4-linux-x86_64.tar.gz
+Interpreter: julia-1.10.10-linux-x86_64.tar.gz
 
 Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280
 
-Interpreter: julia-1.10.4-linux-aarch64.tar.gz
+Interpreter: julia-1.10.10-linux-aarch64.tar.gz
 
 注意,
 
@@ -303,7 +303,7 @@ Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列 ( bash ) 運行啓動指令 :
 ```
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalServer/StatisticalServerJulia/
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia --project=/home/StatisticalServer/StatisticalServerJulia/
 ```
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
@@ -336,7 +336,7 @@ julia> using JSON
 
 Interpreter :
 
-Julia - 1.10.4
+Julia - 1.10.10
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
 https://julialang.org/
@@ -473,7 +473,7 @@ https://juliahub.com/
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 ```
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 ```
 
 微軟視窗系統 ( Window10 x86_64 )
@@ -1242,7 +1242,7 @@ root@localhost:~# chmod 666 /home/StatisticalServer/StatisticalServerPython/src/
 
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/StatisticalServer/StatisticalServerJulia/ /home/StatisticalServer/StatisticalServerJulia/src/StatisticalAlgorithmServer.jl configFile=/home/StatisticalServer/StatisticalServerJulia/config.txt interface_Function=http_Server webPath=/home/StatisticalServer/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
 ```
 程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
 ```
