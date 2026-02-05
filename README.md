@@ -1,6 +1,7 @@
 ## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
 #### Julia , Python
 #### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」或「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+#### 可自定義擴展新增適配演算法模組.
 
 ---
 
