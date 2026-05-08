@@ -1,0 +1,15 @@
+此文檔「temporary.txt」爲臨時説明項，可直接將其刪除，不影響項目運行.
+
+微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Window11 x86_64 Inter(R)-Core(TM)-m3-6Y30 )
+
+一、創建名爲「tmp」的資料夾，用於作爲 MariaDB 資料庫讀寫資料的臨時暫存路徑。
+
+二、啓動 MariaDB 資料庫伺服器時，需讀入自定義的啓動參數，在自定義指定的配置文檔「configuring_mariadb_with_option_files.ini」裏，需要修改條目參數爲如下值：
+datadir=C:/StatisticalServer/Data/MariaDB/data/
+tmpdir=C:/StatisticalServer/Data/MariaDB/temp/
+basedir=C:/StatisticalServer/Data/MariaDB/
+
+對於 Linux-Ubuntu 系統，啓動 MariaDB 資料庫伺服器時，讀入自定義的啓動參數，保存在自定義指定的配置文檔「configuring_mariadb_with_option_files.cnf」裏，需要修改條目參數爲如下值：
+datadir = /home/StatisticalServer/Data/MariaDB/data/
+tmpdir = /home/StatisticalServer/Data/MariaDB/tmp/
+basedir = /home/StatisticalServer/Data/MariaDB/
