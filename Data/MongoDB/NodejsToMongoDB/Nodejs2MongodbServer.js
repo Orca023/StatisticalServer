@@ -1194,6 +1194,10 @@ function do_Request_Router(
         }
 
         case "/createCollection": {
+        // 向 MongoDB 數據庫的指定數據庫中新增創建指定名稱的集合（表格）;
+        // http://[::1]:27016/createCollection?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"dbTableName\":\"Collection1\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1262,6 +1266,10 @@ function do_Request_Router(
         }
 
         case "/dropCollection": {
+        // 從 MongoDB 數據庫的指定數據庫中刪除指定的集合（表格）;
+        // http://[::1]:27016/dropCollection?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"dbTableName\":\"Collection1\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1330,6 +1338,9 @@ function do_Request_Router(
 
         case "/insertOne": {
         // 向 MongoDB 數據庫的指定數據庫中的指定集合（表格）中插入數據;
+        // http://[::1]:27016/insertOne?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"A\":\"a-1\",\"B\":\"b-1\",\"C\":\"c-1\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1411,6 +1422,9 @@ function do_Request_Router(
 
         case "/insertMany": {
         // 向 MongoDB 數據庫的指定數據庫中的指定集合（表格）中插入數據;
+        // http://[::1]:27016/insertMany?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "[]";
+        // post_Data_String = "[{\"A\":\"a-1\",\"B\":\"b-1\",\"C\":\"c-1\"},{\"A\":\"a-2\",\"B\":\"b-2\",\"C\":\"c-2\"},{\"A\":\"a-3\",\"B\":\"b-3\",\"C\":\"c-3\"},{\"A\":\"a-4\",\"B\":\"b-4\",\"C\":\"c-4\"},{\"A\":\"a-5\",\"B\":\"b-5\",\"C\":\"c-5\"}]";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1496,6 +1510,9 @@ function do_Request_Router(
 
         case "/deleteOne": {
         // 從 MongoDB 數據庫的指定數據庫中的指定集合（表格）中刪除數據;
+        // http://[::1]:27016/deleteOne?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"A\":\"a-4\",\"B\":\"b-4\",\"C\":\"c-4\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1565,6 +1582,9 @@ function do_Request_Router(
 
         case "/deleteMany": {
         // 從 MongoDB 數據庫的指定數據庫中的指定集合（表格）中刪除數據;
+        // http://[::1]:27016/deleteMany?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"A\":\"a-4\",\"B\":\"b-4\",\"C\":\"c-4\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1634,6 +1654,9 @@ function do_Request_Router(
 
         case "/updateOne": {
         // 更新 MongoDB 數據庫的指定數據庫中的指定集合（表格）中的指定數據;
+        // http://[::1]:27016/updateOne?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "[]";
+        // post_Data_String = "[{\"A\":\"a-3\",\"B\":\"b-3\",\"C\":\"c-3\"},{\"A\":\"a-3-new\",\"B\":\"b-3-new\",\"C\":\"c-3-new\"}]";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1719,6 +1742,9 @@ function do_Request_Router(
 
         case "/updateMany": {
         // 更新 MongoDB 數據庫的指定數據庫中的指定集合（表格）中的指定數據;
+        // http://[::1]:27016/updateMany?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "[]";
+        // post_Data_String = "[{\"A\":\"a-3\",\"B\":\"b-3\",\"C\":\"c-3\"},{\"A\":\"a-3-new\",\"B\":\"b-3-new\",\"C\":\"c-3-new\"}]";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1804,6 +1830,9 @@ function do_Request_Router(
 
         case "/find": {
         // 向 MongoDB 數據庫的指定數據庫中的指定集合（表格）中發出檢索指令，並接收返回數據;
+        // http://[::1]:27016/find?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"A\":\"a-3\",\"B\":\"b-3\",\"C\":\"c-3\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1873,6 +1902,9 @@ function do_Request_Router(
 
         case "/countDocuments": {
         // 向 MongoDB 數據庫的指定數據庫中的指定集合（表格）中發出檢索數據條目數量指令，並接收返回符合條件的數據的個數;
+        // http://[::1]:27016/countDocuments?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1
+        // post_Data_String = "{}";
+        // post_Data_String = "{\"A\":\"a-3\",\"B\":\"b-3\",\"C\":\"c-3\"}";
 
             request_POST_JSON = {};
             // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
@@ -1927,6 +1959,643 @@ function do_Request_Router(
                         };
                     }
                 );
+
+            } else {
+
+                console.log("Database error.");
+                response_data_JSON["Database_say"] = "Database error.";
+                response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                if (callback) { callback(response_body_String, null); };
+                // return response_body_String;
+            };
+
+            return response_body_String;
+        }
+
+        case "/shell": {
+        // 向 MongoDB 資料庫發出自定義的字符串類型的指令代碼，然後 MongoDB 資料庫使用 shell 功能運行字符串類型的指令代碼，並接收返回數據;
+        // "http://127.0.0.1:27016/shell?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1"
+        // "http://[::1]:27016/shell?Key=username:password&dbUser=user_Collection1&dbPass=user&dbName=Database1&dbTableName=Collection1"
+        // post_Data_String = "[]";
+        // post_Data_String = "[\"db(\\\"admin\\\").getName()\"]";
+        // post_Data_String = "db(\"admin\").getName()";
+        // db("admin").getName();
+        // show dbs;
+        // use Database1;
+        // db("Database1").dropDatabase();
+        // show collections;
+        // db("Database1").createCollection("Collection1")
+        // db("Database1").collection("Collection1").drop();
+        // db("Database1").collection("Collection1").countDocuments();
+        // db("Database1").collection("Collection1").find({}).count();
+        // db("Database1").collection("Collection1").find({"A":"a-1","B":"b-1","C":"c-1"}).count();
+        // db("Database1").collection("Collection1").find({}).pretty();
+        // db("Database1").collection("Collection1").find({"A":"a-1","B":"b-1","C":"c-1"}).pretty();
+        // db("Database1").collection("Collection1").insertOne({"A":"a-1","B":"b-1","C":"c-1"});
+        // db("Database1").collection("Collection1").insertMany([{"A":"a-1","B":"b-1","C":"c-1"},{"A":"a-2","B":"b-2","C":"c-2"}]);
+        // db("Database1").collection("Collection1").deleteOne({"A":"a-1","B":"b-1","C":"c-1"});
+        // db("Database1").collection("Collection1").deleteMany({"A":"a-1","B":"b-1","C":"c-1"});
+        // db("Database1").collection("Collection1").deleteMany({});
+
+
+            // const db = MongoDBClient.db(dbName);
+
+            // 使用 command() 函數，執行伺服器端 JavaScript 脚本;
+            // let result = await MongoDBClient.db().admin().command({
+            //     // ping: 1,
+            //     eval: String(request_POST_String),
+            //     nolock: true,
+            // });
+            // let result = await MongoDBClient.db("admin").command({
+            //     // ping: 1,
+            //     eval: String(request_POST_String),
+            //     nolock: true,
+            // });
+            // let result = await MongoDBClient.db(dbName).command({
+            //     // ping: 1,
+            //     eval: String(request_POST_String),
+            //     nolock: true,
+            // });
+            // // response_data_JSON["Database_say"] = JSON.stringify(result);
+            // response_data_JSON["Database_say"] = result;
+            // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+            // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+            // // return response_body_String;
+
+            // MongoDBClient.db("admin").command(
+            //     {
+            //         // ping: 1,
+            //         eval: String(request_POST_String),
+            //         nolock: true,
+            //     },
+            //     function (error, result) {
+
+            //         if (error) {
+            //             console.error(error);
+            //             response_data_JSON["Database_say"] = String(error);
+            //             response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+            //             // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+            //             if (callback) { callback(response_body_String, null); };
+            //             // return response_body_String;
+            //         };
+
+            //         if (result) {
+            //             // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+            //             // console.log(result);
+            //             // response_body_String = JSON.stringify(result);
+            //             // response_data_JSON["Database_say"] = JSON.stringify(result);
+            //             response_data_JSON["Database_say"] = result;
+            //             response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+            //             // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+            //             if (callback) { callback(null, response_body_String); };
+            //             // return response_body_String;
+            //         };
+            //     }
+            // );
+
+            let shell_String = String("");
+            request_POST_JSON = [];
+            // 自定義函數判斷客戶端 POST 請求傳送的 request_POST_String 是否為一個 JSON 格式的字符串;
+            // console.log(request_POST_String);
+            if (Object.prototype.toString.call(request_POST_String).toLowerCase() === '[object string]') {
+
+                if (request_POST_String.length > 0) {
+
+                    // if (isStringJSON(request_POST_String)) {
+                    if (((String(request_POST_String.slice(0, 1)) === '[') && (String(request_POST_String.slice(-1)) === ']')) || ((String(request_POST_String.slice(0, 1)) === '{') && (String(request_POST_String.slice(-1)) === '}'))) {
+                    // (String.fromCodePoint(request_POST_String.codePointAt(0)) === '[') && (String.fromCodePoint(request_POST_String.codePointAt(parseInt(parseInt(request_POST_String.length) - parseInt(1)))) === ']')
+
+                        try {
+
+                            request_POST_JSON = JSON.parse(request_POST_String, true);
+                            // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+
+                        } catch (error) {
+
+                            console.error(error);
+                            response_data_JSON["Database_say"] = String(error);
+                            response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                            // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                            if (callback) { callback(response_body_String, null); };
+                            return response_body_String;
+
+                        } finally {};
+
+                    } else {
+
+                        request_POST_JSON = request_POST_String;
+                    };
+
+                } else {
+
+                    console.log("request POST String empty.");
+                    response_data_JSON["Database_say"] = "request POST String empty.";
+                    response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                    // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                    if (callback) { callback(null, response_body_String); };
+                    return response_body_String;
+                };
+
+            } else {
+
+                console.log("request POST type/format cannot be recognized(only String variables are valid).");
+                response_data_JSON["Database_say"] = "request POST type/format cannot be recognized(only String variables are valid).";
+                response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                if (callback) { callback(null, response_body_String); };
+                return response_body_String;
+            };
+            // console.log(request_POST_JSON);
+
+            if (MongoDBClient !== null) {
+
+                if (Object.prototype.toString.call(request_POST_JSON).toLowerCase() === '[object array]') {
+
+                    if (request_POST_JSON.length > 0) {
+
+                        // let result_Array = new Array(parseInt(request_POST_JSON.length, 10)).fill(null);
+                        let result_Array = new Array();
+                        // response_data_JSON["Database_say"] = new Array();
+                        let result_Index = parseInt(0, 10);
+                        for (let i = 0; i < request_POST_JSON.length; i++) {
+                            // console.log(request_POST_JSON[i]);
+
+                            if (Object.prototype.toString.call(request_POST_JSON[i]).toLowerCase() === '[object string]') {
+
+                                if (request_POST_JSON[i].length > 0) {
+
+                                    shell_String = String(String("MongoDBClient") + String(".") + String(request_POST_JSON[i]));
+                                    // shell_String = ["MongoDBClient", String(request_POST_JSON[i])].join('.');
+                                    // shell_String = String("MongoDBClient.").concat(String(request_POST_JSON[i]));
+                                    console.log(shell_String);
+
+                                    try {
+
+                                        // 使用 command() 函數，執行伺服器端 JavaScript 脚本，使用回調函數 callback() 方式接收函數返回值;
+                                        // if (Object.prototype.toString.call(dbName).toLowerCase() === '[object string]') {
+
+                                        //     if (dbName.length > 0) {
+
+                                        //         MongoDBClient.db(dbName).command(
+                                        //             {
+                                        //                 // ping: 1,
+                                        //                 eval: String(shell_String),
+                                        //                 nolock: true,
+                                        //             },
+                                        //             function (error, result) {
+
+                                        //                 result_Index = result_Index + parseInt(1, 10);
+
+                                        //                 if (error) {
+                                        //                     console.log(error);
+
+                                        //                     // response_data_JSON["Database_say"] = String(error);
+
+                                        //                     result_Array.push(String(error));
+                                        //                     // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = String(error);
+                                        //                     // response_data_JSON["Database_say"] = result_Array;
+
+                                        //                     // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        //                     // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        //                     // if (callback) { callback(response_body_String, null); };
+                                        //                     // // return response_body_String;
+                                        //                 };
+
+                                        //                 if (result) {
+                                        //                     // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+                                        //                     // console.log(result);
+
+                                        //                     // response_body_String = JSON.stringify(result);
+                                        //                     // response_data_JSON["Database_say"] = JSON.stringify(result);
+                                        //                     // response_data_JSON["Database_say"] = result;
+
+                                        //                     result_Array.push(result);
+                                        //                     // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = result;
+                                        //                     // response_data_JSON["Database_say"] = result_Array;
+
+                                        //                     // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        //                     // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        //                     // if (callback) { callback(null, response_body_String); };
+                                        //                     // // return response_body_String;
+                                        //                 };
+
+                                        //                 shell_String = String("");  // 復位初始化;
+
+                                        //                 if (result_Index = parseInt(request_POST_JSON.length, 10)) {
+
+                                        //                     // response_body_String = JSON.stringify(result_Array);
+                                        //                     // response_data_JSON["Database_say"] = JSON.stringify(result_Array);
+                                        //                     response_data_JSON["Database_say"] = result_Array;
+
+                                        //                     response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        //                     // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        //                     if (callback) { callback(null, response_body_String); };
+                                        //                     // return response_body_String;
+
+                                        //                     result_Array = null;  // 銷毀變量，釋放内存;
+                                        //                     request_POST_JSON = null;  // 銷毀變量，釋放内存;
+                                        //                 };
+                                        //             }
+                                        //         );
+
+                                        //     } else {
+
+                                        //         // MongoDBClient.db().admin().command(
+                                        //         MongoDBClient.db("admin").command(
+                                        //             {
+                                        //                 // ping: 1,
+                                        //                 eval: String(shell_String),
+                                        //                 nolock: true,
+                                        //             },
+                                        //             function (error, result) {
+
+                                        //                 result_Index = result_Index + parseInt(1, 10);
+
+                                        //                 if (error) {
+                                        //                     console.log(error);
+
+                                        //                     // response_data_JSON["Database_say"] = String(error);
+
+                                        //                     result_Array.push(String(error));
+                                        //                     // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = String(error);
+                                        //                     // response_data_JSON["Database_say"] = result_Array;
+
+                                        //                     // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        //                     // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        //                     // if (callback) { callback(response_body_String, null); };
+                                        //                     // // return response_body_String;
+                                        //                 };
+
+                                        //                 if (result) {
+                                        //                     // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+                                        //                     // console.log(result);
+
+                                        //                     // response_body_String = JSON.stringify(result);
+                                        //                     // response_data_JSON["Database_say"] = JSON.stringify(result);
+                                        //                     // response_data_JSON["Database_say"] = result;
+
+                                        //                     result_Array.push(result);
+                                        //                     // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = result;
+                                        //                     // response_data_JSON["Database_say"] = result_Array;
+
+                                        //                     // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        //                     // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        //                     // if (callback) { callback(null, response_body_String); };
+                                        //                     // // return response_body_String;
+                                        //                 };
+
+                                        //                 shell_String = String("");  // 復位初始化;
+
+                                        //                 if (result_Index = parseInt(request_POST_JSON.length, 10)) {
+
+                                        //                     // response_body_String = JSON.stringify(result_Array);
+                                        //                     // response_data_JSON["Database_say"] = JSON.stringify(result_Array);
+                                        //                     response_data_JSON["Database_say"] = result_Array;
+
+                                        //                     response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        //                     // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        //                     if (callback) { callback(null, response_body_String); };
+                                        //                     // return response_body_String;
+
+                                        //                     result_Array = null;  // 銷毀變量，釋放内存;
+                                        //                     request_POST_JSON = null;  // 銷毀變量，釋放内存;
+                                        //                 };
+                                        //             }
+                                        //         );
+                                        //     };
+
+                                        // } else {
+
+                                            // MongoDBClient.db().admin().command(
+                                            MongoDBClient.db("admin").command(
+                                                {
+                                                    // ping: 1,
+                                                    eval: String(shell_String),
+                                                    nolock: true,
+                                                },
+                                                function (error, result) {
+
+                                                    result_Index = result_Index + parseInt(1, 10);
+
+                                                    if (error) {
+                                                        console.log(error);
+
+                                                        // response_data_JSON["Database_say"] = String(error);
+
+                                                        result_Array.push(String(error));
+                                                        // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = String(error);
+                                                        // response_data_JSON["Database_say"] = result_Array;
+
+                                                        // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                                        // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                                        // if (callback) { callback(response_body_String, null); };
+                                                        // // return response_body_String;
+                                                    };
+
+                                                    if (result) {
+                                                        // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+                                                        // console.log(result);
+
+                                                        // response_body_String = JSON.stringify(result);
+                                                        // response_data_JSON["Database_say"] = JSON.stringify(result);
+                                                        // response_data_JSON["Database_say"] = result;
+
+                                                        result_Array.push(result);
+                                                        // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = result;
+                                                        // response_data_JSON["Database_say"] = result_Array;
+
+                                                        // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                                        // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                                        // if (callback) { callback(null, response_body_String); };
+                                                        // // return response_body_String;
+                                                    };
+
+                                                    shell_String = String("");  // 復位初始化;
+
+                                                    if (result_Index = parseInt(request_POST_JSON.length, 10)) {
+
+                                                        // response_body_String = JSON.stringify(result_Array);
+                                                        // response_data_JSON["Database_say"] = JSON.stringify(result_Array);
+                                                        response_data_JSON["Database_say"] = result_Array;
+
+                                                        response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                                        // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                                        if (callback) { callback(null, response_body_String); };
+                                                        // return response_body_String;
+
+                                                        result_Array = null;  // 銷毀變量，釋放内存;
+                                                        request_POST_JSON = null;  // 銷毀變量，釋放内存;
+                                                    };
+                                                }
+                                            );
+                                        // };
+
+                                    } catch (error) {
+                                        console.log("[" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] try catch finally :");
+                                        console.error(error);
+
+                                        // response_data_JSON["Database_say"] = String(error);
+                                        result_Array.push(String(error));
+                                        // result_Array[i] = String(error);
+                                        // response_data_JSON["Database_say"] = result_Array;
+                                        // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        // if (callback) { callback(response_body_String, null); };
+                                        // // return response_body_String;
+
+                                        result_Index = result_Index + parseInt(1, 10);
+                                        shell_String = String("");  // 復位初始化;
+                                        if (result_Index = parseInt(request_POST_JSON.length, 10)) {
+
+                                            // response_body_String = JSON.stringify(result_Array);
+                                            // response_data_JSON["Database_say"] = JSON.stringify(result_Array);
+                                            response_data_JSON["Database_say"] = result_Array;
+
+                                            response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                            // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                            if (callback) { callback(null, response_body_String); };
+                                            // return response_body_String;
+
+                                            result_Array = null;  // 銷毀變量，釋放内存;
+                                            request_POST_JSON = null;  // 銷毀變量，釋放内存;
+                                        };
+                                    } finally {
+                                        // await MongoDBClient.close();
+                                    }
+
+                                } else {
+                                    result_Index = result_Index + parseInt(1, 10);
+
+                                    console.log("request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script empty.");
+
+                                    // response_data_JSON["Database_say"] = "request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script empty.";
+
+                                    result_Array.push(String("request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script empty."));
+                                    // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = String("request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script empty.");
+                                    // response_data_JSON["Database_say"] = result_Array;
+
+                                    // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                    // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                    // if (callback) { callback(null, response_body_String); };
+                                    // // return response_body_String;
+
+                                    if (result_Index = parseInt(request_POST_JSON.length, 10)) {
+
+                                        // response_body_String = JSON.stringify(result_Array);
+                                        // response_data_JSON["Database_say"] = JSON.stringify(result_Array);
+                                        response_data_JSON["Database_say"] = result_Array;
+
+                                        response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                        // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                        if (callback) { callback(null, response_body_String); };
+                                        // return response_body_String;
+
+                                        result_Array = null;  // 銷毀變量，釋放内存;
+                                        request_POST_JSON = null;  // 銷毀變量，釋放内存;
+                                    };
+                                };
+
+                            } else {
+                                result_Index = result_Index + parseInt(1, 10);
+
+                                console.log("request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script type/format cannot be recognized, only String variables are valid.");
+
+                                // response_data_JSON["Database_say"] = String("[" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] Invalid request, request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script type/format cannot be recognized, only String variables are valid.");
+
+                                result_Array.push(String("[" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] Invalid request, request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script type/format cannot be recognized, only String variables are valid."));
+                                // result_Array[parseInt((parseInt(result_Index, 10) - parseInt(1, 10)), 10)] = String("[" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] Invalid request, request POST [" + String(parseInt((parseInt(i, 10) + parseInt(1, 10)), 10)) + "] MongoDB shell script type/format cannot be recognized, only String variables are valid.");
+                                // response_data_JSON["Database_say"] = result_Array;
+
+                                // response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                // // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                // if (callback) { callback(null, response_body_String); };
+                                // // return response_body_String;
+
+                                if (result_Index = parseInt(request_POST_JSON.length, 10)) {
+
+                                    // response_body_String = JSON.stringify(result_Array);
+                                    // response_data_JSON["Database_say"] = JSON.stringify(result_Array);
+                                    response_data_JSON["Database_say"] = result_Array;
+
+                                    response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                    // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                    if (callback) { callback(null, response_body_String); };
+                                    // return response_body_String;
+
+                                    result_Array = null;  // 銷毀變量，釋放内存;
+                                    request_POST_JSON = null;  // 銷毀變量，釋放内存;
+                                };
+                            };
+                        };
+
+                    } else {
+
+                        console.log("request POST Array(String) ( MongoDB shell script ) empty.");
+                        response_data_JSON["Database_say"] = "request POST Array(String) ( MongoDB shell script ) empty.";
+                        response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                        // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                        if (callback) { callback(null, response_body_String); };
+                        // return response_body_String;
+                    };
+
+                } else if (Object.prototype.toString.call(request_POST_JSON).toLowerCase() === '[object string]') {
+
+                    if (request_POST_JSON.length > 0) {
+
+                        shell_String = String(String("MongoDBClient") + String(".") + String(request_POST_JSON));
+                        // shell_String = ["MongoDBClient", String(request_POST_JSON)].join('.');
+                        // shell_String = String("MongoDBClient.").concat(String(request_POST_JSON));
+                        console.log(shell_String);
+
+                        try {
+
+                            // 使用 command() 函數，執行伺服器端 JavaScript 脚本，使用回調函數 callback() 方式接收函數返回值;
+                            // if (Object.prototype.toString.call(dbName).toLowerCase() === '[object string]') {
+
+                            //     if (dbName.length > 0) {
+
+                            //         MongoDBClient.db(dbName).command(
+                            //             {
+                            //                 // ping: 1,
+                            //                 eval: String(shell_String),
+                            //                 nolock: true,
+                            //             },
+                            //             function (error, result) {
+
+                            //                 if (error) {
+                            //                     console.error(error);
+                            //                     response_data_JSON["Database_say"] = String(error);
+                            //                     response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                            //                     // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                            //                     if (callback) { callback(response_body_String, null); };
+                            //                     // return response_body_String;
+                            //                 };
+
+                            //                 if (result) {
+                            //                     // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+                            //                     // console.log(result);
+                            //                     // response_body_String = JSON.stringify(result);
+                            //                     // response_data_JSON["Database_say"] = JSON.stringify(result);
+                            //                     response_data_JSON["Database_say"] = result;
+                            //                     response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                            //                     // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                            //                     if (callback) { callback(null, response_body_String); };
+                            //                     // return response_body_String;
+                            //                 };
+
+                            //                 shell_String = "";  // 清空銷毀變量，釋放内存;
+                            //             }
+                            //         );
+
+                            //     } else {
+
+                            //         // MongoDBClient.db().admin().command(
+                            //         MongoDBClient.db("admin").command(
+                            //             {
+                            //                 // ping: 1,
+                            //                 eval: String(shell_String),
+                            //                 nolock: true,
+                            //             },
+                            //             function (error, result) {
+
+                            //                 if (error) {
+                            //                     console.error(error);
+                            //                     response_data_JSON["Database_say"] = String(error);
+                            //                     response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                            //                     // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                            //                     if (callback) { callback(response_body_String, null); };
+                            //                     // return response_body_String;
+                            //                 };
+
+                            //                 if (result) {
+                            //                     // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+                            //                     // console.log(result);
+                            //                     // response_body_String = JSON.stringify(result);
+                            //                     // response_data_JSON["Database_say"] = JSON.stringify(result);
+                            //                     response_data_JSON["Database_say"] = result;
+                            //                     response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                            //                     // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                            //                     if (callback) { callback(null, response_body_String); };
+                            //                     // return response_body_String;
+                            //                 };
+
+                            //                 shell_String = "";  // 清空銷毀變量，釋放内存;
+                            //             }
+                            //         );
+                            //     };
+
+                            // } else {
+
+                                // MongoDBClient.db().admin().command(
+                                MongoDBClient.db("admin").command(
+                                    {
+                                        // ping: 1,
+                                        eval: String(shell_String),
+                                        nolock: true,
+                                    },
+                                    function (error, result) {
+
+                                        if (error) {
+                                            console.error(error);
+                                            response_data_JSON["Database_say"] = String(error);
+                                            response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                            // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                            if (callback) { callback(response_body_String, null); };
+                                            // return response_body_String;
+                                        };
+
+                                        if (result) {
+                                            // console.log("從數據庫 " + dbName + " 中包含的集合 " + dbTableName + " 中查詢數據成功.");
+                                            // console.log(result);
+                                            // response_body_String = JSON.stringify(result);
+                                            // response_data_JSON["Database_say"] = JSON.stringify(result);
+                                            response_data_JSON["Database_say"] = result;
+                                            response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                                            // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                                            if (callback) { callback(null, response_body_String); };
+                                            // return response_body_String;
+                                        };
+
+                                        shell_String = "";  // 清空銷毀變量，釋放内存;
+                                    }
+                                );
+                            // };
+
+                        } catch (error) {
+                            console.log("try catch finally :");
+                            console.error(error);
+
+                            shell_String = "";  // 清空銷毀變量，釋放内存;
+
+                            response_data_JSON["Database_say"] = String(error);
+                            response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                            // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                            if (callback) { callback(response_body_String, null); };
+                            // return response_body_String;
+                        } finally {
+                            // await MongoDBClient.close();
+                        }
+
+                    } else {
+
+                        console.log("request POST String ( MongoDB shell script ) empty.");
+                        response_data_JSON["Database_say"] = "request POST String empty.";
+                        response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                        // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                        if (callback) { callback(null, response_body_String); };
+                        // return response_body_String;
+                    };
+
+                } else {
+
+                    console.log("request POST type/format cannot be recognized, only String or Array(String) variables are valid.");
+                    response_data_JSON["Database_say"] = "Invalid request, request POST type/format cannot be recognized, only String or Array(String) variables are valid.";
+                    response_body_String = JSON.stringify(response_data_JSON);  // 將JOSN對象轉換為JSON字符串;
+                    // String = JSON.stringify(JSON); JSON = JSON.parse(String);
+                    if (callback) { callback(null, response_body_String); };
+                    // return response_body_String;
+                };
 
             } else {
 
@@ -2288,7 +2957,7 @@ if ((dbUser.length === 0) && (dbPass.length === 0)) {
 } else {
     MongodbUrl = `mongodb://${ dbUser }:${ dbPass }@${ MongodbHost }:${ MongodbPort }/${ dbName }`;
 };
-// console.log(MongodbUrl);
+console.log(MongodbUrl);
 
 // // 控制臺傳參檢查埠號（port）是否已經被占用，控制臺傳參，其中「port」為需要檢測的端口號，運行方式示例：node PortIsOccupied 80;
 // if (port >= 65535 || port <= 0) {
