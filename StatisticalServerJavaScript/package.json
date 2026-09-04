@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@serialport/bindings-cpp": "^13.0.1",
+    "@serialport/list": "^13.0.0",
+    "@serialport/parser-byte-length": "^13.0.0",
+    "@serialport/parser-cctalk": "^13.0.0",
+    "@serialport/parser-delimiter": "^13.0.0",
+    "@serialport/parser-inter-byte-timeout": "^13.0.0",
+    "@serialport/parser-packet-length": "^13.0.0",
+    "@serialport/parser-readline": "^13.0.0",
+    "@serialport/parser-ready": "^13.0.0",
+    "@serialport/parser-regex": "^13.0.0",
+    "@serialport/parser-slip-encoder": "^13.0.0",
+    "@serialport/parser-spacepacket": "^13.0.0",
+    "@serialport/stream": "^13.0.0",
+    "d3": "^7.9.0",
+    "ijavascript": "^5.2.1",
+    "mathjs": "^14.9.1",
+    "ml": "^8.0.0",
+    "serialport": "^13.0.0"
+  }
+}
